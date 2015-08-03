@@ -1,0 +1,232 @@
+$red: #cb2026;
+
+$medium: 480px;
+$large: 680px;
+$xxl: 900px;
+$maxwidth:980px;
+
+@mixin breakpoint($point) {
+    @media screen and ('min-width:' + $point) {
+        @content;
+    }
+}
+
+.deal_banner{
+  padding:0% 0% 1% 0%;
+  border-bottom: 1px dotted rgba(192,192,192,0.7);
+  text-align: center;
+  @include breakpoint($xxl){
+      margin: 5% 0% 0% 0%;
+    }
+  p{
+    font-size: 0.6em;
+    text-align: center;
+    font-weight: 600;
+    display: inline-block;
+    @include breakpoint($medium){
+      font-size: 0.8em;
+    }
+    @include breakpoint($large){
+      font-size: 1em; 
+    }
+  }
+  a{
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    h6{
+      font-size: 0.5em;
+      color: rgba(192,192,192,0.9);
+      @include breakpoint($medium){
+        font-size: 0.7em;
+      }
+      @include breakpoint($large){
+        font-size: 0.8em;
+      }
+      &:hover{
+        color: $red;
+      }
+    }
+  }
+  span{
+    color: $red;
+  }
+}
+
+
+
+.LogoWrapper_mobile{
+  margin: 2% 30% 0% 30%;
+  @include breakpoint($medium){
+    width: 8%;
+  }
+}
+
+.shopcart_mobile{
+  margin: 2% 5% 0% 0%;
+  @include breakpoint($medium){
+    width: 8%;
+  }
+}
+
+.LogoWrapper_user{
+  width: 10%;
+  float: left;
+  margin: 2% 0% 0% 5%;
+  @include breakpoint($medium){
+    width: 8%;
+  }
+  img{
+    display: block;
+    width: 100%;
+  }
+}
+
+.globalSearch_mobil{
+  width:90%;
+  display: block;
+  margin: 0 auto 0 auto;
+  @include breakpoint($xxl){
+    display: none;
+  }
+  input{
+    display: block;
+    width: 98%;
+    margin: 0 auto 0 auto;
+  }
+  input:last-child{
+    width: 100%;
+    display: block;
+    margin: 0 auto 0 auto;
+  }
+}
+
+.pb_search{
+
+  .styled-select {
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 3px;
+
+  overflow: hidden;
+  position: relative;
+  }
+
+  .styled-select, .styled-select select { 
+    width: 12%;
+  }
+
+  select:focus { 
+    outline: none; 
+  }
+
+  .styled-select select {
+    height: 34px;
+    padding: 5px 0 5px 5px;
+    background: transparent;
+    border: none;
+
+    
+    /*hide default down arrow in webkit */
+    -webkit-appearance: none; 
+  }
+
+  @-moz-document url-prefix(){
+    .styled-select select { width: 110%; }
+  }
+
+  .fa-sort-desc {
+    position: absolute;
+    top: 0;
+    right: 12px;
+    font-size: 24px;
+  }
+
+   select::-ms-expand { display: none; } /* hide default down arrow in IE10*/
+
+  /* hack to fall back in opera */
+  _:-o-prefocus, .selector {
+    .styled-select { background: none; }
+    }
+
+  .pb_text{
+    width: 75%;
+  }
+
+  .search_glass{
+    display: inline-block;
+    width: 10%;
+    input{
+      border: 1px solid white;
+      border-radius: 0px 5px 5px 0px;
+      background: url(../img/white_magglass.png);
+      background-size: auto 80%;
+      background-repeat: no-repeat;
+      background-position: center center;
+      color: white;
+      font-size: 1em;
+      width: 100%;
+    }
+
+  }
+    
+}
+
+@include breakpoint($large){
+  .page_title{
+    p{
+      margin: 4% 0% 0% 0%;
+    }
+    h1{
+      font-size: 2.4em;
+      margin: 1% 0 0% 0%;
+    }
+  }    
+}
+
+@include breakpoint($xxl){
+  .pb_navi{
+    margin: 2% 0 0 0;
+  }
+  .pb_box_2{
+    margin: 1% 0 0 0;
+  }
+  .pb_box_2 div:last-child{
+    p{
+      margin: 12% 0 0 0;
+      font-size: 0.9em;
+    }
+  }
+  .pb_sec_box1{
+    h2{
+      margin: 7% 0 0 0;
+    }
+  }
+  .pb_sec_box2{
+    h2{
+      margin: 7% 0 0 0;
+    }
+  }
+
+}
+
+@include breakpoint($maxwidth){
+  .content_wrapper{
+    max-width: 980px;
+    margin: 0% auto 0% auto;
+  }
+
+  .page_title{
+    p{
+      margin: 4% 0 0 0;
+    }
+
+    h1{
+      font-size: 2.7em;
+      margin: 1% 0% 4% 0%;
+
+    }
+  }
+}
+
+

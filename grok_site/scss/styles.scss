@@ -1,0 +1,2167 @@
+$sans: 'Ubuntu', sans-serif, arial;
+
+$blue:  #00a4e4;
+$green: #78b543;
+$skyblue: #95d9f4;
+$red: #f15d52;
+$yellow: #fbac4c;
+$drkblue: #1d3143;
+
+$medium: 480px;
+$large: 760px;
+$full: 1270px;
+
+@mixin clearfix {
+  &:after { content: ""; display: table; clear: both; }
+}
+
+@mixin breakpoint($point) {
+    @media screen and ('min-width:' + $point) {
+        @content;
+    }
+}
+
+body{
+	font-family: $sans;
+	width: 100%;
+	margin:0;
+	padding:0 0;
+	position: relative;
+	
+}
+
+.navigation_bar{
+	position: fixed;
+	background: white;
+	width: 100%;
+	z-index: 10000;
+	@include clearfix;
+	
+	
+		
+}
+
+header{
+	box-shadow: 0 4px 2px -2px gray;
+	@include clearfix;
+	
+}
+
+.navigation_bar{
+	padding: 2% 0 3% 0;
+	@include breakpoint($large){
+		padding: 1% 0% 2% 0%;
+	}
+	@include breakpoint($full){
+		padding: 1% 0 1% 0;
+	}
+}
+
+.site_logo{
+	width:20%;
+	float:left;
+	padding:0% 0 0 0;
+	margin: 0% auto 0% 4%;
+
+	@include breakpoint($medium){
+		width: 15%;
+	}
+
+	@include breakpoint($large){
+		padding:0% 0% 0% 3%;
+		width: 16%;
+	}
+	@include breakpoint($full){
+		width: 11%;
+	}
+
+	
+
+	a{
+		display: block;
+		width: 100%;
+		text-decoration: none;
+	}
+
+	h2{
+		color:$blue;
+		margin: 0 auto 0 auto;
+		font-size: 1.5em;
+		text-align: center;
+	}
+	@include breakpoint($large){
+		font-size: 1.8em;
+	}
+	@include breakpoint($full){
+		font-size: 1.2em;	
+	}
+
+}
+
+.navi_register{
+	width: 100%;
+	margin: 0% auto 0 auto;
+	border: 2px solid $red;
+	padding: 4% 0 4% 0;
+	@include breakpoint($large){
+		padding: 4% 0 4% 0;			
+	}
+	@include breakpoint($full){
+		width: 70%;	
+	}
+	a{
+		width: 100%;
+		display: block;
+		text-align: center;	
+		text-decoration: none;
+		h6{
+			text-align: center;
+			margin: 2% auto 4% auto;
+			color: $red;
+			font-size: 0.7em;
+			@include breakpoint($large){
+				font-size: 0.8em;
+			}
+		}
+	}
+}
+
+.header_links{
+	width:72%;
+	margin: 0% auto 0% auto;
+	padding:6% 0 0% 0;
+	float:right;
+	@include breakpoint($medium){
+		width: 70%;
+		padding: 4% 0% 0% 0%;
+	}
+	@include breakpoint($large){
+		margin: 0% auto;
+		padding: 5% 0% 0% 0%;
+	}
+	@include breakpoint($full){
+		padding: 2% 0% 0% 0%;
+		width: 73%;
+		font-size: 1em;
+	}
+
+	ul{
+		display: block;
+		width:100%;
+		margin: 0 0;
+		padding:0% 0 0 0%;
+
+		@include breakpoint($medium){
+			padding: 0% 0 0 0%;
+		}
+
+		@include breakpoint($large){
+			padding:0% 0 0 0;
+		}
+
+		
+
+
+		
+	}
+
+	li{
+		list-style:none;
+		display: inline;
+		width:auto;
+		@include breakpoint($full){
+			margin: 0 20pt;
+		}
+		
+		
+		
+
+	}
+
+	a{
+		display: inline-block;	
+		color:$green;
+		font-size: 0.7em;
+		text-decoration: none;
+		font-weight: 500;
+		text-transform: uppercase;
+		margin: 0 0.2em 0 0.2em;
+		
+
+		&:hover,&:active {
+			color: $red;
+			transition: color 0.3s linear;
+
+		}
+
+		@include breakpoint($medium){
+			font-size: 0.9em;
+		}
+
+		@include breakpoint($large){
+			font-size: 1.5em;
+			margin: 0 0.4em 0 0.4em;
+		}
+
+		
+	}
+}
+
+
+.register_section{
+	clear:both;
+	background: url(../img/stars.gif) no-repeat 0 0;
+	background-size:cover;
+	margin:0 auto;
+	width:100%;
+
+	@include breakpoint($medium){
+		background: url(../img/stars.gif) repeat 0 0;
+	}
+
+}
+
+.register_wrapper{
+	width:80%;
+	margin:0 auto;
+}
+
+.red_overlay{
+	background-color: $red;
+	padding-bottom:35%;
+	padding-top:40%;
+	transition: background-color 0.3s linear;
+	@include breakpoint($medium){
+		padding-bottom:17%;
+		padding-top: 30%;
+	}
+	@include breakpoint($large){
+		padding-bottom:25%;
+		padding-top: 35%;
+	}
+	@include breakpoint($full){
+		padding-bottom: 6%;
+		padding-top: 10%;
+	}
+
+}
+
+.red_overlay:active,.red_overlay:hover{
+	background-color: rgba( $red, 0 );
+}
+
+
+
+.register_logo{
+	width: 60%;
+	margin: 0 auto 12% auto;
+	@include breakpoint($medium){
+		width: 50%;
+	}
+
+	@include breakpoint($large){
+		width: 40%;
+		margin: 0 auto 6% auto;
+	}
+	@include breakpoint($full){
+		width: 20%;
+		margin: 0 auto 3% auto;
+	}
+
+	
+
+
+	a{
+		display: block;
+	}
+
+	img{
+		display: block;
+		width: 100%;
+		padding-top: 7%;
+
+		
+
+		-webkit-animation: ROTATE 15s infinite linear; /* Safari 4+ */
+ 	 	-moz-animation:    ROTATE 15s infinite linear; /* Fx 5+ */
+  		-o-animation:      ROTATE 15s infinite linear; /* Opera 12+ */
+  		animation:         ROTATE 15s infinite linear; /* IE 10+, Fx 29+ */
+
+
+		// &:hover{
+		// 	transition: all 15.0s ease-in-out;
+		// 	transform: rotate(360deg);
+		// }
+	}
+}
+
+@-webkit-keyframes ROTATE {
+  0%   { transform: rotate(0); }
+  100% { transform: rotate(-360deg); }
+}
+@-moz-keyframes ROTATE {
+  0%   { transform: rotate(0); }
+  100% { transform: rotate(-360deg); }
+}
+@-o-keyframes ROTATE {
+  0%   { transform: rotate(0); }
+  100% { transform: rotate(-360deg); }
+}
+@keyframes ROTATE {
+  0%   { transform: rotate(0); }
+  100% { transform: rotate(-360deg); }
+}
+
+.register_button{
+	width: 80%;
+	margin:0% auto 15% auto;
+	padding:2% 1%;
+	border-radius:4px;
+	border:4px solid rgba(white,0.5);
+	
+
+	@include breakpoint($medium){
+		width: 65%;
+		margin: 10% auto 0 auto;
+		padding:4% 2%;
+	}
+
+	@include breakpoint($large){
+		margin: 5% auto 0 auto;
+		padding:3% 1%;
+		width: 43%;
+	}
+	@include breakpoint($full){
+		padding: 2% 0%;
+		width: 25%;
+		margin: 0% auto 0% auto;
+	}
+
+
+
+	
+
+
+
+	h3{
+		text-align: center;
+		margin:0 auto;
+		font-weight: 400;
+		color: rgba(white, 0.8);
+		font-size: 2.8em;
+
+		@include breakpoint($medium){
+			font-size: 2em;
+		}
+
+		@include breakpoint($large){
+			font-size: 3.3em;
+		}
+		@include breakpoint($full){
+			font-size: 2em;
+		}
+
+
+		
+
+	}
+
+	a{
+		text-decoration: none;
+	}
+
+	}
+
+
+.register_button:hover,.register_button:active{
+	border:4px solid $red;
+
+	h3{
+		color: $red;
+	}
+}	
+.register_text{
+	width: 100%;
+
+
+	ul{
+		margin: 5% auto 0 auto;
+		padding:0;
+
+		@include breakpoint($medium){
+			margin: 10% auto 0 auto;
+		}
+
+		@include breakpoint($large){
+			margin: 2% auto 0 auto;
+		}
+
+		
+
+
+	}
+
+	li{
+		list-style: none;
+		margin: 2% auto 0 auto;
+		text-align: center;
+		color:white;
+
+		@include breakpoint($medium){
+			font-size: 1.2em;
+		}
+
+		@include breakpoint($large){
+			font-size: 1.9em;
+		}
+		@include breakpoint($full){
+			font-size: 1.7em;
+		}
+
+
+		
+	}
+
+	li:first-child{
+		font-size: 1.1em;
+		font-weight: 600;
+		color:$yellow;
+
+		@include breakpoint($medium){
+			padding-top:5%; 
+			font-size: 1.4em;
+		}
+
+		@include breakpoint($large){
+			padding-top: 11%;
+			font-size: 1.7em;
+		}
+
+		@include breakpoint($full){
+			padding-top: 3%;
+			font-size: 1.8em;
+		}
+
+
+		
+	}
+
+
+}
+
+.app_section{
+	background: url(../img/concrete_seamless.png) repeat 0 0;
+	background-size:100% 100%;
+	width: 100%;
+	margin:0;
+	padding-bottom: 30%;
+	padding-top: 10%;
+
+	@include breakpoint($medium){
+		padding-top: 7%;
+		padding-bottom: 12%;
+	}
+
+	@include breakpoint($large){
+		padding-bottom:15%;
+		padding-top: 14%;
+	}
+
+	@include breakpoint($full){
+		padding-top: 2%;
+		padding-bottom: 3%;
+	}
+
+
+	
+
+}
+
+.app_wrapper{
+	width: 90%;
+	margin: 0 auto;
+
+
+	ul{
+		width: 100%;
+		display: block;
+		padding: 5% 0 0 0;
+
+		@include breakpoint($medium){
+			padding: 0 0 0 0;
+		}
+	}
+
+	li{
+		list-style: none;
+		display: block;
+		width: 100%;
+		margin: 0;
+	}
+
+	p{
+		margin: 2% 0 0 0;
+		color: $green;
+		font-size: 0.9em;
+		text-align: center;
+		font-weight: 500;
+		text-transform: uppercase;
+
+
+		@include breakpoint($medium){
+			font-size: 1em;
+		}
+
+		@include breakpoint($large){
+			font-size: 1.7em;
+		}
+		@include breakpoint($full){
+			font-size: 1.3em;
+		}
+
+
+		
+
+		
+	}
+
+	h2{
+		text-align: center;
+		color: $blue;
+		margin-top: 0;
+		margin-bottom: 5%;
+		font-size: 3em;
+	}
+}
+
+.app_logo{
+	width:50%;
+	margin: 11% auto 11% auto;
+
+	@include breakpoint($medium){
+		width: 45%;
+	}
+	@include breakpoint($large){
+		width: 35%;
+	}
+	@include breakpoint($full){
+		width: 20%;
+		margin: 0% auto 0% auto;
+	}
+
+
+	
+
+}
+	
+
+.app_button{
+	width:45%;
+	margin: 0 auto;
+
+	@include breakpoint($medium){
+		width: 15%;
+	}
+
+	@include breakpoint($large){
+		width: 40%;
+	}
+	@include breakpoint($full){
+		width: 20%;
+	}
+
+	
+	
+
+
+	a{
+		display: block;
+
+	}
+
+	img{
+		display: block;
+		width: 100%;
+
+
+	}
+}
+
+.about_header{
+	background: url(../img/mars_red.jpg) no-repeat 0 0;
+	background-size:100% 100%;
+	box-shadow:inset 0px 0px 75px 7px rgba(0,0,0,0.8);
+
+	
+
+
+
+	
+}
+
+.about_header_logo{
+	width: 30%;
+	margin: 0% auto 0 auto;
+	z-index:1000;
+
+	@include breakpoint($large){
+		width: 20%;
+	}
+	@include breakpoint($full){
+		width: 10%;
+	}
+
+
+
+	a{
+		display: block;
+	}
+
+	img{
+		display: block;
+		width: 100%;
+		padding-top: 6%; 
+
+		
+
+	}
+}
+
+.about_header{
+	h3{
+		color:white;
+		text-align: center;
+		padding: 0 0 4% 0;
+		margin: 0 auto 0 auto;
+		font-weight: bold;
+		font-size: 1.5em;
+		text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+
+
+		@include breakpoint($medium){
+			font-size: 2em;
+		}
+
+		@include breakpoint($large){
+			font-size: 2.5em;
+		}
+
+		@include breakpoint($full){
+			font-size: 1.8em;
+		}
+
+
+		
+	}
+}
+
+.about_section{
+	background: url(../img/concrete_seamless.png) repeat 0 0;
+	background-size:100% 100%;
+	width: 100%;
+	padding: 10% 0 10% 0;
+	@include clearfix;
+
+	@include breakpoint($medium){
+		padding: 4% 0 3% 0;
+	}
+
+}
+
+.about_wrapper{
+	width: 90%;
+	margin:0 auto;
+
+	@include breakpoint($large){
+		width: 80%;
+	}
+
+	@include breakpoint($full){
+		width: 70%;
+	}
+
+
+}
+
+.block_1, .block_2{
+	display: block;
+	width: 100%;
+
+	@include clearfix;
+
+	
+
+
+	h3{
+		text-align: center;
+		color: $blue;
+		margin: 9% 0 2% 0;
+
+		@include breakpoint($medium){
+			font-size: 1.1em;
+			margin: 0% 0 2% 0;
+		}
+		@include breakpoint($large){
+			font-size: 1.7em;
+			margin: 0% 0% 2% 0%;
+		}
+	}
+
+	p{
+		color: rgba(0, 0, 0, 0.6);
+		font-size: 1em;
+		text-align: left;
+		font-weight: 300;
+
+		@include breakpoint($medium){
+			font-size: 1em;
+		}
+
+		@include breakpoint($large){
+			font-size: 1.3em;
+		}
+	}
+
+	
+}
+
+
+
+.block_1{
+
+	p:last-child{
+		padding-bottom: 8%;
+	}
+	@include breakpoint($medium){
+			width: 100%;
+			margin: 0 2% 2% 0;
+		}
+}
+
+.about_img_block_1,.about_img_block_2{
+	display: block;
+	width:90%;
+	margin:0 auto;
+	
+	
+
+	
+
+	img{
+		display: block;
+		width: 100%;
+		margin: 0;
+		box-shadow: 0px 4px 7px 2px rgba(0,0,0,0.3);
+		@include breakpoint($large){
+			margin: 0% 0% 2% 0;
+		}
+
+		
+
+	}
+}
+
+@include breakpoint($medium){
+	.about_img_block_1{
+		width: 90%;
+		margin: 0 auto 0 auto;
+		float: none;
+
+	}
+@include breakpoint($full){
+	.about_img_block_1{
+		width: 41%;
+		margin: 6% auto 0 auto;
+		float: left;
+	}
+}
+
+
+	.about_img_block_2{
+		width: 41%;
+		margin: 5% auto 0 auto;
+		float: right;
+	}
+
+}
+
+.p_block,.p_block_2{
+	width: 90%;
+	margin: 0 auto;
+
+
+	@include breakpoint($large){
+		p{
+			line-height: 28px;
+		}
+	}
+}
+
+@include breakpoint($full){
+	float: left;		
+}
+
+
+@include breakpoint($medium){
+	.p_block{
+		width: 90%;
+		margin: 6% auto 2% auto;
+		float: none;
+
+}
+
+@include breakpoint($medium){
+	.p_block_2{
+		width: 90%;
+		margin: 0 auto 2% auto;
+		h3{
+			text-align: left;
+		}
+		
+	}
+}
+
+@include breakpoint($full){
+	.p_block{
+		width: 48%;
+		margin: 0% auto 2% auto;
+		float: right;
+		p{
+			font-size: 1em;
+		}
+	}
+
+	.p_block_2{
+		width: 48%;
+		margin: 0% auto 2% auto;
+		float: left;
+		p{
+			font-size: 1em;
+		}
+		h3{
+			text-align: center;
+		}
+	}
+
+}
+
+
+
+}
+
+.session_section{
+	background: url(../img/mars_blue.jpg) no-repeat 0 0;
+	position:relative;
+	z-index:-4;
+	background-size:cover;
+	padding: 0% 0 0% 0;
+	display: block;
+	box-shadow:inset 0px 0px 75px 7px rgba(0,0,0,0.8);
+
+}
+
+.session_overlay{
+	background: rgba(black,0.4);
+	width:100%;
+	margin:0%;
+	padding:5% 0% 15% 0;
+	@include breakpoint($full){
+		padding: 4% 0 4% 0;
+	}
+}
+
+.session_wrapper{
+	width: 90%;
+	margin: 0 auto;
+
+	@include breakpoint($large){
+		width: 80%;
+	}
+	@include breakpoint($full){
+		width: 70%;
+	}
+
+}
+
+.session_logo{
+	width: 30%;
+	margin: 0% auto 0 auto;
+
+	@include breakpoint($large){
+		width: 25%;
+	}
+	@include breakpoint($full){
+		width: 10%;
+	}
+
+	a{
+		display: block;
+	}
+
+	img{
+		display: block;
+		width: 100%;
+		padding-top: 0%; 
+
+		@include breakpoint($large){
+			padding-top: 20%;
+		}
+
+		
+
+	}
+}
+
+.session_wrapper{
+	h3{
+		color:white;
+		text-align: center;
+		padding: 0 0 4% 0;
+		margin: 0 auto 0 auto;
+		font-weight: bold;
+		font-size: 1.5em;
+
+		@include breakpoint($medium){
+			font-size: 2em;
+		}
+
+		@include breakpoint($large){
+			font-size: 2.5em;
+		}
+		@include breakpoint($full){
+			font-size: 1.8em;
+		}
+
+		
+	}
+
+	p{
+		color: rgba(255,255,255,0.9);
+		width: 90%;
+		margin: 0 auto 4% auto;
+		font-size: 1em;
+		text-align: left;
+		font-weight: 300;
+		text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+
+		@include breakpoint($medium){
+			font-size: 1em;
+			margin: 8% auto 0 auto;
+		}
+
+		@include breakpoint($large){
+			font-size: 1.3em;
+			margin: 4% auto 0 auto;
+		}
+
+		
+	}
+}
+
+
+
+.price_section{
+	background:#6b7a87;
+	width:100%;
+	margin: 0 auto;
+	padding: 3% 0 20% 0;
+
+	@include breakpoint($medium){
+		padding: 0% 0 5% 0;
+	}
+
+	
+
+}
+
+.price_wrapper{
+	width:90%;
+	margin:0 auto;
+
+
+	ul{
+		margin: 0 auto;
+		padding: 0;
+		text-align: center;
+	}
+
+	li{
+		list-style: none;
+		text-align: center;
+
+		@include breakpoint($medium){
+			width: 30%;
+			display: inline-block;
+			margin: 1% 1%;
+
+			
+		}
+
+		div{
+			background:white;
+			width: 60%;
+			margin: 10% auto;
+			padding: 15% 0 15% 0;
+			box-shadow: 0px 4px 7px 2px rgba(0,0,0,0.3);
+
+			@include breakpoint($medium){
+			width: 100%;
+			display: inline-block;
+			margin: 10% 0;
+			padding: 40% 0 40% 0;
+			}
+			@include breakpoint($full){
+			padding: 20% 0 20% 0;
+			}
+
+			
+
+			h4{
+				color: $red;
+				@include breakpoint($full){
+					font-size: 2em;
+				}
+			
+
+			}
+
+			h5{
+				color: rgba(192,192,192,0.8);
+				margin: 2% 0 0 0;
+
+				@include breakpoint($medium){
+					font-size: 0.7em;
+				}
+				@include breakpoint($full){
+					font-size: 1.1em;
+				}
+
+				
+			}
+
+			p{
+				color: $blue;
+				font-size: 3em;
+				margin: 2% auto 0 auto;
+				font-weight: 200;
+
+				@include breakpoint($medium){
+				font-size: 2em;
+				}
+				@include breakpoint($full){
+				font-size: 3em;
+				}
+
+				
+			}
+		}
+	}
+
+	.price_button:hover,.price_button:active{
+		background:$blue;
+
+	}
+
+	.price_button{
+		width: 60%;
+		margin: 0 auto;
+		background: $red;
+		padding: 5% 0% 5% 0%;
+		border-radius: 3px;
+		box-shadow: 0px 4px 7px 2px rgba(0,0,0,0.3);
+
+		@include breakpoint($large){
+			width: 40%;
+			
+		}
+		@include breakpoint($full){
+			width: 32%;
+			padding: 2% 0 2% 0%;
+		}
+
+		a{
+			text-decoration: none;
+		}
+
+		h3{
+			text-align: center;
+			color: white;
+			font-size: 2em;
+			@include breakpoint($full){
+				font-size: 3em;
+			}
+
+			
+		}
+	}
+
+	h3, h4{
+		margin: 0 auto;
+
+	}
+}
+
+
+.speaker_header{
+	background: url(../img/Mars_Green.jpg) no-repeat 0 0;
+	background-size:cover;
+	box-shadow:inset 0px 0px 75px 7px rgba(0,0,0,0.8);
+}
+
+.speaker_header_logo{
+	width: 30%;
+	margin: 0% auto 0 auto;
+
+	@include breakpoint($large){
+		width: 20%;
+	}
+	@include breakpoint($full){
+		width: 10%;	
+	}
+
+	a{
+		display: block;
+	}
+
+	img{
+		display: block;
+		width: 100%;
+		padding-top: 6%; 
+
+		
+
+	}
+}
+
+.speaker_header{
+	h3{
+		color:white;
+		text-align: center;
+		padding: 0 0 4% 0;
+		margin: 0 0% 0 0;
+		font-weight: bold;
+		font-size: 1.5em;
+
+		@include breakpoint($medium){
+			font-size: 2em;
+		}
+
+		@include breakpoint($large){
+			font-size: 2.5em;
+		}
+
+		@include breakpoint($full){
+			font-size: 1.8em;
+		}
+
+		
+	}
+}
+
+.speaker_section{
+	width:100%;
+	margin:0 auto;
+	background: url(../img/concrete_seamless.png) repeat 0 0;
+	background-size:100% 100%;
+	@include clearfix;
+
+
+
+
+	h3{
+		display: block;
+		color: rgba(0,0,0,0.8);
+		text-shadow: 0px 2px 2px rgba(192,192,192,0.3);
+		font-size: 2em;
+		margin: 0% 0% 3% 5%;
+		padding: 4% 0 0 0;
+		font-weight: 400;
+		
+
+
+		
+		
+
+	}
+}
+
+.bio_block_1, .bio_block_2, .bio_block_3, .bio_block_4,{
+	width: 100%;
+	margin: 0 auto 8% auto;
+	background: url(../img/concrete_seamless.png) repeat 0 0;
+	background-size:100% 100%;
+	border-bottom: 2px solid $green;
+
+	
+
+	@include breakpoint($large){
+		width: 25%;
+		display: block;
+		float: left;
+		vertical-align: top;
+	}
+
+	@include breakpoint($full){
+		margin: 0% auto 4% auto;	
+	}
+
+
+	ul{
+		display: block;
+		padding:0;
+		margin: 0 auto;
+		width:82%;
+		@include breakpoint($large){
+			width: 90%;
+		}
+
+		li{
+			list-style: none;
+
+			h4{
+				color: rgba(0,0,0,0.8);
+				text-shadow: 0px 2px 2px rgba(192,192,192,0.3);
+				font-size: 1.5em;
+				margin: 4% 0 0% 0;
+				font-weight: 300;
+				@include breakpoint($large){
+					font-size: 1.3em;
+				}
+
+				
+			}
+
+			h5{
+				color: rgba(241,93,82,0.9);
+				text-shadow: 0px 2px 2px rgba(192,192,192,0.3);
+				margin: 4% 0 0% 0;
+				font-size: 1em;
+				font-weight: 400;
+				@include breakpoint($large){
+					font-size: 0.8em;
+				}
+			}
+
+			h6{
+				color: rgba(0,0,0,0.4);
+				text-shadow: 0px 2px 2px rgba(192,192,192,0.3);
+				font-size: 1em;
+				margin: 4% 0 0 0;
+				font-weight: 400;
+				@include breakpoint($large){
+					font-size: 0.8em;
+				}
+			}
+
+			p{
+				color: rgba(0,0,0,0.6);
+				text-shadow: 0px 2px 2px rgba(192,192,192,0.3);
+				font-weight: 300;
+				@include breakpoint($large){
+					font-size: 0.9em;
+					line-height: 18px;
+				}
+			}
+
+		}
+	}
+}
+
+.bio_block_4{
+	margin: 0% auto 0% auto;
+}
+	
+.bio_blocks{
+	margin: 0 auto;
+	width: 90%;
+	.bio_block_4{
+		margin: 0% 0% 0% 0%;
+	}
+}
+		
+
+
+.talker_photo, .talker_photo_2, .talker_photo_3, .talker_photo_4{
+	display:block;
+	width:90%;
+	margin: 0 auto;
+	@include breakpoint($large){
+		width: 75%;
+	}
+
+
+	img{
+		display: block;
+		width: 50%;
+		border-radius:150px;
+		border:5px solid $red;
+		margin: 0 auto;
+
+		@include breakpoint($medium){
+			width: 40%;
+			border-radius:150px;
+			border:10px solid $red;
+			margin: 0 auto;
+		}
+
+		@include breakpoint($large){
+			width: 100%;
+		}
+		
+
+	}
+
+}
+
+.social_icon{
+	width: 100%;
+	display:block;
+	margin:0 0 0% 0;
+	padding:0% 0% 6% 0%;
+	text-align:left;
+
+	div{
+		display: inline-block;
+		width: 15%;
+		margin: 0;
+		padding:0%;
+		@include breakpoint($large){
+			width: 25%;
+		}
+
+		a{
+			display: block;
+			width: 100%;
+			text-align: left;
+
+			img{
+				display: block;
+				width: 100%;
+				text-align: left;
+
+				&:hover, &:active{
+					border-bottom: 6px solid $red;
+					transition: border-bottom 0.3s linear;
+				}
+				
+			}
+		}
+	}
+
+}
+
+.social_icon_perm{
+	width: 100%;
+	display:block;
+	margin:0 0 0% 0;
+	padding:0% 0% 0% 0%;
+	text-align:left;
+
+	div{
+		display: inline-block;
+		width: 15%;
+		margin: 0;
+		padding:0%;
+
+		@include breakpoint($large){
+			width: 11%;
+		}
+
+		
+
+
+
+		a{
+			display: block;
+			width: 100%;
+			text-align: left;
+
+			img{
+				display: block;
+				width: 100%;
+				text-align: left;
+
+				&:hover{
+					border-bottom: 6px solid $red;
+					transition: border-bottom 0.3s linear;
+				}
+				
+			}
+		}
+	}
+
+}
+
+
+
+.performer_section{
+	width:100%;
+	margin:0 auto;
+	padding:0 0 14% 0;
+	border-bottom: 9em solid rgba(241,93,82,0.8);
+	background: url(../img/concrete_seamless.png) repeat 0 0;
+	background-size:100% 100%;
+	//border-bottom: 9em solid transparent;
+	@include clearfix;
+	.wu-tang_perm_block_top{
+		display: none;
+	}
+	//&:hover{
+		
+	//	-webkit-border-image: url(../img/stars.gif) 100 100 round; /* Safari 3.1-5 */
+	//	-o-border-image: url(../img/stars.gif) 100 100 round; /* Opera 11-12.1 */
+	//	border-image: url(../img/stars.gif) 100 100 round;
+	//}
+		
+	
+	@include breakpoint($medium){
+		padding:0 0 1% 0;
+	}
+
+
+	
+	
+
+	h3{
+		display: block;
+		color: rgba(0,0,0,0.8);
+		text-shadow: 0px 2px 2px rgba(192,192,192,0.3);
+		font-size: 2em;
+		margin: 0% 0% 3% 5%;
+		padding: 4% 0% 0% 0%;
+		font-weight: 400;
+		@include breakpoint($large){
+			padding: 0% 0% 0% 0%; 
+		}
+		
+
+	}
+
+	ul{
+		display: block;
+		padding:0;
+		margin: 0 auto;
+		width:82%;
+
+		@include breakpoint($large){
+			width: 47%;
+			margin: 0 5% 0 0;
+			float: right;
+		}
+
+		li{
+			list-style: none;
+
+			h4{
+				color: rgba(0,0,0,0.8);
+				text-shadow: 0px 2px 2px rgba(192,192,192,0.3);
+				font-size: 1.5em;
+				margin: 4% 0 0% 0;
+				font-weight: 300;
+				@include breakpoint($large){
+					font-size: 1.3em;
+					text-align: center;
+				}
+				
+				
+
+			}
+
+			h5{
+				color: rgba(241,93,82,0.9);
+				text-shadow: 0px 2px 2px rgba(192,192,192,0.3);
+				margin: 4% 0 0% 0;
+				font-size: 1em;
+				font-weight: 400;
+				@include breakpoint($large){
+					font-size: 0.8em;
+					text-align: center;
+				}
+
+				
+			}
+
+			h6{
+				color: rgba(0,0,0,0.4);
+				text-shadow: 0px 2px 2px rgba(192,192,192,0.3);
+				font-size: 1em;
+				margin: 4% 0 0 0;
+				font-weight: 400;
+				@include breakpoint($large){
+					font-size: 0.8em;
+					text-align: center;
+				}
+
+				
+			}
+
+			p{
+				color: rgba(0,0,0,0.6);
+				text-shadow: 0px 2px 2px rgba(192,192,192,0.3);
+				font-weight: 300;
+				@include breakpoint($large){
+					font-size: 0.9em;
+				}
+
+				
+			}
+
+
+		}
+	}
+
+
+}
+
+@include breakpoint($large){
+	.wu-tang_perm_block_bottom{
+		display: none;
+	}
+
+	.wu-tang_perm_block_top{
+		display: block;
+		clear: left;
+		li{
+			list-style: none;
+
+			h4{
+				color: rgba(0,0,0,0.8);
+				text-shadow: 0px 2px 2px rgba(192,192,192,0.3);
+				font-size: 1.5em;
+				margin: 4% 0 0% 0;
+				font-weight: 300;
+				@include breakpoint($large){
+					font-size: 1.3em;
+					text-align: center;
+				}
+			
+
+			}
+
+			h5{
+				color: rgba(241,93,82,0.9);
+				text-shadow: 0px 2px 2px rgba(192,192,192,0.3);
+				margin: 4% 0 0% 0;
+				font-size: 1em;
+				font-weight: 400;
+				@include breakpoint($large){
+					font-size: 0.8em;
+					text-align: center;
+				}
+
+				
+			}
+
+			h6{
+				color: rgba(0,0,0,0.4);
+				text-shadow: 0px 2px 2px rgba(192,192,192,0.3);
+				font-size: 1em;
+				margin: 4% 0 0 0;
+				font-weight: 400;
+				@include breakpoint($large){
+					font-size: 0.8em;
+					text-align: center;
+				}
+
+		
+			}
+		}
+	}
+}
+
+
+.wu-tang_block{
+	width:82%;
+	margin:0 auto;
+
+	@include breakpoint($large){
+		width: 40%; 
+		float: left;
+		margin: 0 2% 0 5%;
+	}
+
+	img{
+		display: block;
+		width: 100%;
+		@include breakpoint($large){
+			width: 100%;
+			margin: 0 auto;
+		}
+
+		
+	}
+}
+
+.schedule_header{
+	background: url(../img/mars_gold.jpg) no-repeat 0 0;
+	background-size:100% 100%;
+	box-shadow:inset 0px 0px 75px 7px rgba(0,0,0,0.8);
+}
+
+.schedule_header_logo{
+	width: 30%;
+	margin: 0% auto 0 auto;
+
+	@include breakpoint($large){
+		width: 20%;
+	}
+
+	@include breakpoint($full){
+		width: 10%;
+	}
+
+	
+
+	a{
+		display: block;
+	}
+
+	img{
+		display: block;
+		width: 100%;
+		padding-top: 6%; 
+		
+
+	}
+}
+
+.schedule_header{
+	h3{
+		color:white;
+		text-align: center;
+		padding: 0 0 4% 0;
+		margin: 0 auto 0 auto;
+		font-weight: 500;
+		font-size: 1.5em;
+
+		@include breakpoint($medium){
+			font-size: 2em;
+		}
+
+		@include breakpoint($large){
+			font-size: 2.5em;
+		}
+
+		@include breakpoint($full){
+			font-size: 1.8em;		
+		}
+
+		
+	}
+}
+
+.schedule_section{
+	width:100%;
+	margin:0 auto;
+	border-bottom: 4em solid rgba(192,192,192,0.9);
+	@include breakpoint($large){
+		background:#78b543;
+	}
+}
+
+.WED_BLOCK,.THURS_BLOCK,.FRI_BLOCK{
+	width:100%;
+	margin:0 auto;
+	@include breakpoint($large){
+		@include clearfix;
+	}
+
+
+}
+
+.green_block_1,.green_block_2,.green_block_3{
+	width: 100%;
+	margin: 0 auto;
+	background: $green;
+	padding: 6% 0 6% 0;
+	@include breakpoint($large){
+		width: 20%;
+		display: block;
+		float: left;
+
+	}
+
+
+	ul{
+		width: 60%;
+		padding:0;
+		margin: 0 auto;
+	}
+
+	li{
+		list-style: none;
+		text-align: center;
+
+		h2{
+			margin: 0 0 0 0;
+			padding: 2% 0 0 0;
+			color: white;
+			font-size: 3em;
+			font-weight: 100;
+			text-shadow: 0px 2px 2px rgba(192,192,192,0.3);
+			@include breakpoint($large){
+				font-size: 2em;
+			}
+
+		}
+
+		h5{
+			margin: 0 0 0% 0;
+			padding: 0 0 5% 0;
+			color: white;
+			font-size: 1.2em;
+			font-weight: 100;
+			text-shadow: 0px 2px 2px rgba(192,192,192,0.3);
+			@include breakpoint($large){
+				font-size: 1em;
+			}
+		}
+	}
+}
+
+
+
+.green_block_1:hover,.green_block_1:active{
+	background: url(../img/mars_rover_a.gif) no-repeat 0 0;
+	background-size:cover;
+	transition: background-color 0.3s linear;
+
+}
+
+.green_block_2:hover,.green_block_2:active{
+	background: url(../img/mars_rover.gif) no-repeat 0 0;
+	background-size:cover;
+	transition: background-color 0.3s linear;
+
+}
+
+.green_block_3:hover,.green_block_3:active{
+	background: url(../img/mars_rover_2.gif) no-repeat 0 0;
+	background-size:cover;
+	transition: background-color 0.3s linear;
+
+}
+
+
+
+.wed_event_section, .thurs_event_section, .fri_event_section{
+	width:100%;
+	margin: 0 0;
+	padding: 0 0;
+	background: url(../img/concrete_seamless.png) repeat 0 0;
+	background-size:100% 100%;
+
+	@include breakpoint($large){
+		width: 80%;
+		margin: 0 0;
+		display: block;
+		float: left;
+	}
+
+	.event_2, .event_3{
+		border-top: 2px dotted rgba($green,0.8);
+	}
+
+	
+
+	.event_1,.event_2,.event_3{
+		width: 100%;
+		margin: 0 auto 0 auto;
+		display: block;
+		padding: 8% 0 8% 0;
+		@include breakpoint($large){
+			border-top: 1px dotted rgba(192,192,192,0.5);
+			padding: 4% 0 4% 0;
+
+			
+		}
+		
+
+
+		.event_time{
+			display: inline-block;
+			width: 25%;
+			margin: 0 0 0 8%;
+			padding:0;
+			vertical-align: middle;
+			@include breakpoint($medium){
+				margin: 0% 0% 0% 8%;
+			}
+
+			p{
+				font-size: 0.65em;
+				margin: 0% 0% 0% 0%;
+				padding: 18% 0% 0% 0%;
+
+				@include breakpoint($medium){
+					font-size: 0.9em;
+				}
+
+				@include breakpoint($large){
+					text-align: right;
+					font-size: 1em;
+				}
+
+				@include breakpoint($full){
+					font-size: 1.5em;
+					padding: 8% 0% 0% 0%;
+				}
+
+				
+				
+			}
+		}
+
+		.event_details{
+			display: inline-block;
+			width: 62%;
+			margin: 0 0 0% 3%;
+			padding: 0;
+			vertical-align: top;
+			text-align: left;
+
+			
+
+			h3{
+				margin: 0;
+				font-size: 1.2em;
+				font-weight: 200;
+				color: $green;
+				@include breakpoint($medium){
+					font-size: 1.6em;
+				}
+				@include breakpoint($large){
+					text-align: center;
+					font-size: 1.8em;
+				}
+				
+			}
+
+			h4{
+				margin: 0;
+				font-size: 0.8em;
+				font-weight: 500;
+				color: rgba(192,192,192,0.9);
+				@include breakpoint($medium){
+					font-size: 1.1em;
+				}
+				@include breakpoint($large){
+					text-align: center;
+					font-size: 1.2em;
+				}
+				
+
+			}
+
+		}
+	}
+}
+
+.event_1:hover,.event_1:active,.event_2:hover,.event_2:active,.event_3:hover,.event_3:active,{
+	.event_time{
+		p{
+			color: $blue;
+		}
+	}
+
+	.event_details{
+		h3{
+			color: $blue;
+		}
+
+		h4{
+			color: $blue;
+		}
+	}
+}
+
+
+
+.sponsors_header{
+	background: url(../img/Mars_white.jpg) no-repeat 0 0;
+	background-size: 100% 100%;
+	box-shadow:inset 0px 0px 75px 7px rgba(0,0,0,0.8);
+}
+
+.sponsors_header_logo{
+	width: 30%;
+	margin: 0% auto 0 auto;
+
+	@include breakpoint($large){
+		width: 20%;
+	}
+
+	@include breakpoint($full){
+		width: 10%;
+	}
+
+	a{
+		display: block;
+	}
+
+	img{
+		display: block;
+		width: 100%;
+		padding-top: 6%; 
+
+		
+
+	}
+}
+
+.sponsors_header{
+	h3{
+		color:white;
+		text-align: center;
+		padding: 0 0 4% 0;
+		margin: 0 auto 0 auto;
+		font-weight: 500;
+		font-size: 1.5em;
+
+		@include breakpoint($medium){
+			font-size: 2em;
+		}
+
+		@include breakpoint($large){
+			font-size: 2.5em;
+		}
+
+		@include breakpoint($full){
+			font-size: 1.8em;
+		}
+
+
+	}
+}
+
+.sponsors_section{
+	width:100%;
+	display: block;
+	padding-bottom:8%;
+	background: url(../img/concrete_seamless.png) repeat 0 0;
+	background-size:100% 100%;
+
+	p{
+		font-size: 0.9em;
+		font-weight: 500;
+		margin: 0 5% 5% 5%;
+		text-align: center;
+		color: rgba(0,0,0,0.6);
+		text-shadow: 0px 2px 2px rgba(192,192,192,0.3);
+
+	}
+
+}
+
+
+@include breakpoint($large){
+	.sponsors_wrapper{
+		width: 90%;
+		margin: 0 auto;
+	}
+}
+
+@include breakpoint($full){
+	.sponsors_wrapper{
+		width: 80%;
+	}		
+}
+	
+.logo_block{
+	width:24%;
+	margin: 0 auto;
+	display:inline-block;
+	vertical-align: middle;
+
+	a{
+		display: block;
+		width: 100%;
+
+		img{
+			display: block;
+			width: 100%;
+
+		}
+	}
+
+
+
+}
+
+.presentation{
+	width:100%;
+	background:$red;
+	margin:0 0 0% 0;
+	padding:0 0 15% 0;
+	background-position:center center;
+
+	@include breakpoint($large){
+		padding:0 0 0% 0;
+	}
+	
+	@include breakpoint($full){
+		padding: 5% 0 4% 0;	
+	}
+
+
+
+
+
+	&:hover,&:active{
+		background:black;
+		background-position:center center;
+		background-image:url(../img/mars_spin.gif);
+		background-repeat: no-repeat;
+		background-size: contain;
+		transition: background 0.000001s ease-in-out;
+	}
+
+	h1{
+		text-align: center;
+		color: white;
+		font-weight: 200;
+		font-size: 1.6em;
+		padding:25% 0 0 0;
+		margin: 0 0 0 0;
+		@include breakpoint($large){
+			padding:0% 0 0 0;
+		}
+		
+	}
+}
+
+.logo_row{
+	width:80%;
+	margin:0 auto 0 auto;
+	@include clearfix;
+
+	@include breakpoint($full){
+		width: 33%;	
+	}
+
+	
+
+}
+
+.presentation_logo{
+	display:block;
+	float: left;
+	width:49%;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+
+	a{
+		display: block;
+		margin: 0;
+		padding:0;
+		
+		img{
+			display: block;
+			width: 100%;
+		}
+	}
+}
+
+.footer{
+	width:100%;
+	background: url(../img/concrete_seamless.png) repeat 0 0;
+	background-size:100% 100%;
+
+	@include breakpoint($medium){
+		width:100%;
+		margin: 0 auto;
+		padding:0 0 2% 0;
+
+		.footer_wrapper{
+			width: 100%;
+			margin: 0 auto;
+			
+		}
+	}
+	
+
+	ul{
+		display: block;
+		padding:0% 0% 10% 0%;
+		margin: 0;
+
+		@include breakpoint($medium){
+			width: 100%;
+			text-align: center;
+			margin: 0 auto;
+		}
+
+		@include breakpoint($full){
+			padding: 0% 0% 3% 0%;
+		}
+
+		li{
+			width: 60%;
+			margin: 2% auto 0%;
+			display: block;
+			list-style: none;
+			text-decoration: none;
+			
+			@include breakpoint($medium){
+				display: inline-block;
+				width: auto;
+			}
+			
+			a{
+				display: block;
+				font-size: 0.9em;
+				text-align: center;
+				text-decoration: none;
+				color:rgba(251,172,76,0.8);
+				font-weight: 500;
+				text-shadow: 0px 2px 2px rgba(192,192,192,0.3);
+
+				@include breakpoint($medium){
+					font-size: 0.6em;
+					display: block;
+					margin: 0 0.3em;
+				}
+
+				@include breakpoint($large){
+					font-size: 1.2em;
+				}
+
+				&:hover{
+					color: $blue;
+					transition: color 0.3s linear;
+				}
+				
+			}
+		}
+	}
+}
+
+.footer_logo{
+	width:30%;
+	margin: 0 auto;
+	padding: 0;
+
+	
+
+	a{
+		display: block;
+		width: 100%;
+	}
+
+	img{
+		display: block;
+		width: 100%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+

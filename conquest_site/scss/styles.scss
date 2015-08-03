@@ -1,0 +1,1219 @@
+$lato: 'lato', sans-serif, arial;
+
+$darkgreen: #3D473F;
+$seafoam: #4E665B;
+$lightgreen: #7C8A70;
+$lightgrey: #edeeee;
+$red: #c71e21;
+$textgrey: #989898;
+$artemis: #aba46c;
+$finisher: #848fbf;
+$sacred: #8f4646;
+$medusa: #48524f;
+
+$medium: 480px;
+$large: 790px;
+$maxwidth:980px;
+$xxl: 1020px;
+$full: 1240px;
+
+@mixin clearfix {
+  &:after { content: ""; display: table; clear: both; }
+}
+
+@mixin breakpoint($point) {
+    @media screen and ('min-width:' + $point) {
+        @content;
+    }
+}
+
+html{
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	font-family: $lato;
+	width: 100%;
+	margin:0;
+	padding:0;
+	position: relative;
+	top:0;
+	z-index:3000;
+	-webkit-text-stroke-width: .05px;
+	-webkit-text-stroke-color: white;
+	-webkit-font-smoothing:antialiased;
+}
+
+.video_header{
+	margin:0 auto;
+	padding-bottom:0;
+	overflow: hidden;
+
+
+	video{
+		width: 150%;
+		z-index: -1;
+		position: absolute;
+		left: -25%;
+	}
+	@include breakpoint($full){
+		 width: 130;
+		 left: 15%;
+	}
+
+}
+
+.video_wrapper{
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+	padding-bottom: 3em;
+	@include breakpoint($large){
+			padding-bottom: 8em;
+		}
+	@include breakpoint($full){
+		 padding-bottom: 10em;
+	}
+
+}
+
+.logo{
+	width: 20%;
+	margin: 0% auto 8% auto;
+	padding: 3% 0 0 0;
+	@include breakpoint($medium){
+			width: 15%;
+			margin: 0% auto 4% auto;
+		}
+	@include breakpoint($full){
+		 width: 8%;
+	}
+	
+	@include breakpoint($xxl){
+		 width: 8%;
+	}
+
+
+	img{
+		display: block;
+		width: 100%;
+	}
+}
+
+
+.header_text{
+	color: white;
+
+
+	h1{
+		font-size: 1.3em;
+		text-align: center;
+		font-weight: 400;
+		margin-bottom:0; 
+		text-shadow: 2px 1px rgba(83,151,121,0.4);
+		@include breakpoint($medium){
+			font-size: 1.8em;
+		}
+		@include breakpoint($large){
+			font-size: 3em;
+		}
+		@include breakpoint($full){
+		 	font-size: 3em;
+		}
+	}
+
+	h3{
+		font-size: 0.7em;
+		text-align: center;
+		font-weight: 300;
+		margin: 2% 0 0 0;
+		text-shadow: 2px 1px rgba(83,151,121,0.3);
+		@include breakpoint($medium){
+			font-size: 1em;
+		}
+		@include breakpoint($large){
+			font-size: 1.4em;
+		}
+
+	}
+
+}
+
+.header_button{
+	border: 2px solid white;
+	border-radius: 4px;
+	border-shadow:2px 1px rgba(83,151,121,0.3);;
+	width: 35%;
+	margin: 2em auto 0% auto;
+	@include breakpoint($large){
+		width: 20%;
+		margin: 6em auto 0% auto;
+		}
+	@include breakpoint($full){
+		 margin: 4em auto 0% auto;
+	}	
+
+	a{
+		text-decoration: none;
+	}
+
+	h3{
+		color: white;
+		font-size: 1em;
+		text-align: center;
+		font-weight: 300;
+		text-decoration: none;
+		margin: 8% 1% 8% 1%;
+		text-shadow: 2px 1px rgba(83,151,121,0.3);
+		@include breakpoint($large){
+			font-size: 1em;
+		}
+		@include breakpoint($xxl){
+		 	font-size: 1.4em;
+		}
+		&:hover{
+			color: $red;
+			transition: color 0.3s ease;
+		}
+
+	}
+
+	&:hover{
+		border: 2px solid $red;
+		transition: border 0.3s ease;
+	}
+
+}
+
+.header_nav{
+	background:white;
+	width:100%;
+	margin: 0;
+	padding: 4% 0 4% 0;
+	border-bottom: 1px dotted $textgrey;
+	overflow: hidden;
+	position: relative;
+	@include clearfix;
+	@include breakpoint($xxl){
+			padding: 2% 0 2% 0;
+		}
+
+	&:hover{
+		background:$lightgrey;
+		transition: background 0.7s ease-in-out;
+	}
+
+	ul{
+		display: block;
+		width: 90;
+		margin: 0 auto;
+		padding: 0,0,0,0;
+		@include clearfix;
+	
+
+		li{
+			float:left;
+			width: 30%;
+			margin: 0 auto;
+			list-style: none;
+			a{
+				display: inline-block;
+				width: 100%;
+				text-align: center;
+				text-decoration: none;
+			}
+
+		}
+	}
+}
+
+@include breakpoint($large){
+	.header_nav_wrapper{
+	width: 98%;
+	margin: 0 auto;
+}
+		}
+
+.nav_img_box{
+	width:100%;
+	vertical-align: bottom;
+	display: block;
+	text-align: center;
+	margin: 4% 0 0 0;
+	
+
+	img{
+		display: block;
+		max-height: 50px;
+		margin: 0 auto;
+	}
+
+	@include breakpoint($large){
+			margin: 0 auto;
+		}
+}
+
+.nav_img_text{
+	display: block;
+	text-align: center;
+	margin: 2% 0 0% 0;
+	
+	@include breakpoint($full){
+			margin: 5% 0% 0% 0%;
+	}			
+
+	a{
+		text-decoration: none;
+		list-style: none;
+		text-align: center;
+
+	}
+
+	h4{
+		text-align: center;
+		color: rgba(124,138,112,0.7);
+		margin: 0% 0 0 0;
+		font-size: 0.5em;
+		font-weight: 600;
+		text-height:2px;
+		@include breakpoint($medium){
+			font-size: 0.8em;
+		}
+		@include breakpoint($large){
+			font-size: 0.9em;
+		}
+		@include breakpoint($full){
+			font-size: 1.3em;
+		}	
+
+		&:hover{
+			color: $red;
+			transition: color 0.3s ease-in-out;
+		}
+	}
+}
+
+.home_content{
+	background:white;
+	padding-bottom: 8%;
+	padding-top:10%;
+	border-bottom: 1px dotted $textgrey;
+	@include breakpoint($full){
+		 padding-bottom: 4%;
+		 padding-top: 5%;
+	}	
+
+	&:hover{
+		background:$lightgrey;
+		transition: background 0.7s ease-in-out;
+	}
+	.home_wrapper{
+		width: 70%;
+		margin: 0% auto 0 auto;
+	@include breakpoint($full){
+		 width: 50%;
+	}	
+	}
+	h1{
+		color: $red;
+		font-size: 0.75em;
+		text-align: center;
+		font-weight: 300;
+		@include breakpoint($medium){
+			font-size: 1em;
+		}
+		@include breakpoint($large){
+			font-size: 1.2em;
+		}
+		@include breakpoint($full){
+			font-size: 2em;
+		}	
+	}
+	p{
+		color: $textgrey;
+		text-align: center;
+		font-size: 0.5em;
+		@include breakpoint($medium){
+			font-size: 0.8em;
+		}
+		@include breakpoint($large){
+			font-size: 1em;
+		}
+		@include breakpoint($full){
+			font-size: 1.2em;
+		}	
+
+	}
+}
+
+.beer_content{
+	background:white;
+	width:100%;
+	padding:0;
+	margin:0;
+}
+
+
+.beer_wrapper{
+	@include clearfix;
+	@include breakpoint($medium){
+		width: 90%;
+		margin: 0% auto 0% auto;
+		padding-top: 1%;
+		padding-bottom: 5%;
+	}
+
+}
+
+.block{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	cursor: pointer;
+	@include breakpoint($medium){
+		margin: 5% auto 0% auto;
+		box-shadow: 0px 7px 20px 1px rgba(0,0,0,0.6)
+	}
+	@include breakpoint($large){
+			width: 47.5%;
+			float: left;
+			padding: 4% 0 4% 0;
+		}
+
+	&:hover .flipcard{
+		opacity: 1;
+		transition: opacity 0.7s ease-in-out;
+
+	}
+}
+
+
+.artemis_block{
+	background: $artemis;
+
+	.flipcard{
+		background: $artemis;
+	}
+}
+
+.finisher_block{
+	background: $finisher;
+	@include breakpoint($large){
+		margin-left: 5%;	
+	}
+
+	.flipcard{
+		background: $finisher;
+	}
+}
+
+.sacred_block{
+	background: $sacred;
+
+	.flipcard{
+		background: $sacred;
+	}
+}
+
+.medusa_block{
+	background: $medusa;
+	@include breakpoint($large){
+		margin-left: 5%;	
+	}
+
+	.flipcard{
+		background: $medusa;
+	}
+}
+
+.bottle{
+	display: block;
+
+	width:30%;
+	margin: 0 auto;
+
+	img{
+		display: block;
+		width: 100%;
+		padding: 10% 0 0 0;
+	}
+}
+
+.flipcard{
+	padding: 5% 5% 0% 5%;
+	position: absolute;
+
+	top:0;
+	bottom:0;
+	left: 0;
+	right: 0;
+
+	z-index:400;
+	opacity: 0;
+
+	h1{
+		text-align: left;
+		font-size: 1.4em;
+		font-weight: 700;
+		color: rgba(255,255,255,0.8);
+	}
+	p{
+		text-align: left;
+		font-size: 0.7em;
+		font-weight: 300;
+		color: rgba(255,255,255,0.7);
+	}
+	@include breakpoint($medium){
+		p{
+			font-size: 1em;
+		}
+	}
+}
+
+.tasting_room_content{
+	background:white;
+	width:100%;
+	margin:0;
+	padding:5% 0 5% 0;
+	@include clearfix;
+	@include breakpoint($full){
+		padding: 3% 0 5% 0;	
+	}
+	&:hover{
+		background:$lightgrey;
+		transition: background 0.7s ease-in-out;
+	}
+}
+
+.tasting_room_wrapper{
+	width:90%;
+	margin:0 auto;
+	padding:0;
+	@include breakpoint($xxl){
+		width: 85%;
+	}
+}
+
+.tasting_paragraph{
+	width:100%;
+	margin:0;
+	padding-bottom: 5%;
+	@include breakpoint($medium){
+		width: 90%;
+		margin: 0 auto;
+	}
+	h1{
+		color: $darkgreen;
+		font-size: 2em;
+		font-weight: 600;
+		text-align: center;
+		margin: 0;
+		@include breakpoint($full){
+			font-size: 3em;
+		}
+	}
+	p{
+		text-align: center;
+		color: $textgrey;
+		font-size: 0.9em;
+		@include breakpoint($large){
+			font-size: 1.2em;
+			text-align: justify;
+		}
+		@include breakpoint($full){
+			font-size: 1.5em;
+		}
+	}
+
+}
+
+.tasting_room_hours{
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+	@include breakpoint($medium){
+		width: 50%;
+		float: left;
+	}
+	
+	h4{
+		color: $red;
+		margin: 0;
+		padding: 0;
+		font-size: 1.5em;
+		font-size: 300;
+		text-align: center;
+		@include breakpoint($medium){
+		font-size: 1em;
+		@include breakpoint($large){
+			font-size: 1.2em;
+		}
+		}
+	}
+
+}
+
+.weekday{
+	@include clearfix;
+	width: 80%;
+	margin: 2% auto 0 auto;
+	text-align: center;
+
+
+	.day{
+		width: 30%;
+		float: left;
+		font-size: 1.2em;
+		@include breakpoint($medium){
+			font-size: 1em;
+		}
+		@include breakpoint($large){
+			font-size: 1.2em;
+		}
+		h6{
+			margin: 0 0 0 10%;
+			padding: 0;
+			color: $textgrey;
+			text-align: left;
+		}
+	}
+	.hour{
+		width: 70%;
+		float: right;
+		margin: 0;
+		font-size: 1.2em;
+		@include breakpoint($medium){
+			font-size: 1em;
+		}
+		@include breakpoint($large){
+			font-size: 1.2em;
+		}
+		h6{
+			margin: 0 0 0 20%;
+			padding: 0;
+			color: $textgrey;
+			text-align: center;
+		}
+	}
+}
+
+.directions{
+	width:100%;
+	margin:8% 0 0 0;
+	padding:2% 0;
+	border-top: 5px solid $red;
+	border-bottom: 5px solid $red;
+
+	@include breakpoint($medium){
+		width: 50%;
+		float: right;
+		margin:0 0 0 0;
+	}
+	
+	
+}
+
+.directions_wrapper{
+	width: 95%;
+	margin: 0 auto;
+	a{
+		text-decoration: none;
+	}
+
+}
+
+.dir_logo_box{
+	width:30%;
+	margin: 0 auto;
+	img{
+		display: block;
+		width: 100%;
+	}
+
+}
+
+.directions_image_box{
+	width: 80%;
+	margin: 5% auto 0 auto;
+	img{
+		display: block;
+		width: 100%;
+	}
+}
+
+.direction_button{
+	border:2px solid $textgrey;
+	border-radius: 4px;
+	width: 80%;
+	padding: 3% 0;
+	margin:5% auto 5% auto;
+	h6{
+		color: $textgrey;
+		text-align: center;	
+		font-size: 1em;
+		margin: 0;
+		padding: 0;
+	}
+
+	&:hover{
+		border: 2px solid $red;
+		h6{
+			color: $red;
+		}
+	}
+}
+
+.contact_section{
+	background:white;
+	padding: 8% 0 8% 0;
+	@include breakpoint($full){
+		padding: 4% 0 4% 0;
+	}	
+	&:hover{
+		background:$lightgrey;
+		transition: background 0.7s ease-in-out;
+	}
+
+	.contact_wrapper{
+		width: 70%;
+		margin: 0% auto 0 auto;
+		@include breakpoint($full){
+			width: 50%;
+		}	
+	}
+
+	h2{
+		color: $red;
+		font-size: 0.75em;
+		text-align: center;
+		font-weight: 300;
+		@include breakpoint($medium){
+			font-size: 1em;
+		}
+		@include breakpoint($large){
+			font-size: 1.2em;
+		}
+		@include breakpoint($full){
+			font-size: 2em;
+		}	
+	}
+
+
+	p{
+		color: $textgrey;
+		text-align: center;
+		font-size: 0.5em;
+		@include breakpoint($medium){
+			font-size: 0.8em;
+		}
+		@include breakpoint($large){
+			font-size: 1em;
+		}
+		@include breakpoint($full){
+			font-size: 1.2em;
+		}	
+
+	}
+
+}
+
+form{
+	width:100%;
+	.names_fields{
+		border:none;
+		padding:3% 0 0 0;
+		margin: 0 0 5% 0;
+		@include clearfix;
+	}
+	label{
+		display: none;
+	}
+
+	.firstname{
+		input{
+			width: 40%;
+			padding:3% 3%;
+			border: 2px solid $textgrey;
+			border-radius: 4px;
+			color: $textgrey;
+			font-size: 0.5em;
+			float: left;
+			@include breakpoint($medium){
+			font-size: 0.8em;
+			padding:4% 0%;
+			width: 46%;
+			margin: 0 2% 0 0%;
+		}
+			@include breakpoint($large){
+			font-size: 1em;
+			padding: 2% 0%;
+			width: 46%
+		}
+		@include breakpoint($full){
+			font-size: 1.2em;
+			width: 46%;
+		}	
+
+		}
+	}
+
+	.lastname{
+		input{
+			width: 40%;
+			padding:3% 3%;
+			border: 2px solid $textgrey;
+			border-radius: 4px;
+			color: $textgrey;
+			font-size: 0.5em;
+			float: right;
+			@include breakpoint($medium){
+			font-size: 0.8em;
+			padding:4% 0%;
+			width: 46%;
+			margin: 0 0 0 2%;
+		}
+			@include breakpoint($large){
+			font-size: 1em;
+			padding: 2% 0%;
+			width: 45%;
+		}
+		@include breakpoint($full){
+			font-size: 1.2em;
+			width: 46%;
+		}	
+
+
+		}
+	}
+
+	.email_field{
+		border:none;
+		padding:0 0;
+		margin: 0 0 5% 0;
+
+		input{
+			width: 100%;
+			padding:3% 0%;
+			margin: 0% 0%;
+			border: 2px solid $textgrey;
+			border-radius: 4px;
+			color: $textgrey;
+			font-size: 0.5em;
+			float: right;
+			@include breakpoint($medium){
+			font-size: 0.8em;
+			padding:4% 0%;
+			width: 100%;
+			
+		}
+			@include breakpoint($large){
+			font-size: 1em;
+			width: 100%;
+			padding: 2% 0;
+		}
+		@include breakpoint($full){
+			font-size: 1.2em;
+			width: 100%;
+			padding: 2% 0;
+		}	
+
+
+		}
+	}
+
+	.message{
+		border:none;
+		padding:0 0;
+		margin: 0 0 5% 0;
+
+		textarea{
+			width: 100%;
+			padding:3% 0%;
+			margin: 0% 0%;
+			border: 2px solid $textgrey;
+			border-radius: 4px;
+			color: $textgrey;
+			font-size: 0.5em;
+			float: right;
+			@include breakpoint($large){
+				padding: 20% 0 20% 0;
+			}
+		}
+
+
+	}
+
+	.button{
+		border:none;
+		padding:0 0;
+		width: 40%;
+		margin: 0 auto 5% auto;
+
+
+		input{
+			width: 100%;
+			padding:7% 7%;
+			margin: 0% 0%;
+			border: 2px solid black;
+			border-radius: 4px;
+			color: black;
+			font-size: 0.5em;
+			float: right;
+			background:white;
+			@include breakpoint($medium){
+			font-size: 0.8em;
+			padding:10% 10%;
+		}
+			@include breakpoint($large){
+			font-size: 1em;
+			padding: 5% 5%;
+		}
+			&:hover{
+				border: 2px solid $red;
+				color: $red;
+				transition: border 0.3s ease-in-out;
+				transition: color 0.3s ease-in-out;
+			}
+		}
+	}
+
+	
+}
+
+
+.footer_nav{
+	background:$red;
+	width:100%;
+	// margin: 0 0 81% 0;
+	padding: 4% 0 4% 0;
+	border-bottom: 1px dotted $textgrey;
+	@include breakpoint($xxl){
+		padding: 2% 0 2% 0;
+	}
+
+
+	ul{
+		display: block;
+		width: 80;
+		margin: 0 auto;
+		padding: 0,0,0,0;
+		@include clearfix;
+	
+
+		li{
+			float:left;
+			width: 30%;
+			margin: 0 auto;
+			list-style: none;
+			a{
+				display: inline-block;
+				width: 100%;
+				text-align: center;
+				text-decoration: none;
+
+			}
+
+		}
+	}
+}
+
+.white_nav_img_box{
+	width:100%;
+	vertical-align: bottom;
+	display: block;
+	text-align: center;
+	margin: 4% 0 0 0;
+	img{
+		display: block;
+		max-height: 50px;
+		margin: 0 auto;
+	}
+}
+
+.white_nav_img_text{
+	display: block;
+	text-align: center;
+	margin: 2% auto 0 auto;
+
+	a{
+		text-decoration: none;
+		list-style: none;
+		text-align: center;
+
+	}
+
+	h4{
+		text-align: center;
+		color: rgba(255,255,255,0.8);
+		margin: 0% 0 0 0;
+		font-size: 0.5em;
+		font-weight: 600;
+		text-height:2px;
+		@include breakpoint($medium){
+			font-size: 0.8em;
+		}
+		&:hover{
+			color: $darkgreen;
+			transition: color 0.3s ease-in-out;
+		}
+	}
+}
+
+@include breakpoint($large){
+	.footer_nav_wrapper{
+	width: 60%;
+	margin: 0 auto;
+}
+		}
+
+
+.fixed_section_wrapper{
+	position: relative;
+	z-index: -10;
+}
+
+.fixed_section{
+	background:#4E665B;
+	@include clearfix;
+	position:fixed;
+	bottom:0;
+	right: 0;
+	left: 0;
+	z-index: -3;
+
+	.inner{
+		padding: 2% 0 2% 0;
+		margin: 10% 0 2% 0;
+		@include clearfix;
+		@include breakpoint($large){
+			margin: 0% 0 2% 0;
+			padding: 4% 0 0 0;
+		}
+	}
+}
+
+.fixed_logo{
+	width:33%;
+	margin: 0 auto;
+	@include breakpoint($large){
+	float: left;
+	margin: 0 0 1% 0;
+
+	}
+	img{
+		display: block;
+		width: 80%;
+		margin: 0 auto 0 auto;
+		@include breakpoint($large){
+		width: 60%;
+
+	}
+
+	}
+}
+
+
+.fixed_link_1,.fixed_link_2{
+	width: 50%;
+	margin: 8% auto;
+	clear: both;
+	@include clearfix;
+
+	@include breakpoint($medium){
+		margin: 5% auto;
+	}
+
+	@include breakpoint($large){
+	margin: 0% 0%;
+	width: 25%;
+	clear:none;
+	display: block;
+	float: left;
+	vertical-align: middle;
+	
+
+}
+	
+	ul{
+		margin: 0;
+		padding: 0;
+		
+		li{
+			list-style:none;
+			text-align: center;
+			margin: 5% 0 5% 0;
+			a{
+				text-decoration: none;
+				color: white;
+				font-size: 1.1em;
+				font-weight: 300;
+				text-align: center;
+
+
+			}
+		}
+	}
+}
+
+.subscribe_news{
+	clear:both;
+	padding-top: 3%;
+	@include clearfix;
+	width: 100%;
+	@include breakpoint($large){
+		padding-top: 1%;
+	}
+	h3{
+		width: 100%;
+		margin: 5% auto 0 auto;
+		font-size: 1em;
+		font-weight: 300;
+		text-align: center;
+		color: white;
+		@include breakpoint($medium){
+			margin: 0% auto 0 auto;
+		}
+		@include breakpoint($large){
+			padding: 2% auto 0 auto;
+		}
+		@include breakpoint($full){
+			margin: 2% 0 0 0;
+			font-size: 1.4em;
+		}	
+
+	}
+
+	form{
+		width: 90%;
+		margin: 3% auto 0 auto;
+		fieldset{
+			border: none;
+		@include breakpoint($large){
+			margin: 0% auto 0 auto;
+			}
+		}
+	}
+
+	.footer_email{
+		border:none;
+		padding:0 0;
+		margin: 0% 0 0 0;
+		width: 65%;
+		float: left;
+		@include breakpoint($medium){
+			margin: 0% 0% 0% 10%;
+			padding: 2% 0%;
+			width: 50%;	
+		}
+		@include breakpoint($large){
+			width: 58%;
+			margin: 0% 0% 0% 0%;
+			padding: 0 0;
+		}
+
+		input{
+			width: 100%;
+			padding:3% 0%;
+			margin: 0% auto;
+			border: 2px solid $textgrey;
+			border-radius: 4px;
+			color: white;
+			font-size: 0.7em;
+			font-size: 300;
+			background: $seafoam;
+			@include breakpoint($medium){
+				padding:4% 0;
+			}
+			@include breakpoint($large){
+			width: 50%;
+			margin: 0% 0% 0% 50%;
+			padding: 2% 0;
+			@include breakpoint($full){
+			font-size: 1em;
+			}	
+
+		}
+
+		}
+
+
+	}
+	.footer_submit{
+		border:none;
+		padding:0 0;
+		width: 25%;
+		margin: 0 5%;
+		float: left;
+		@include breakpoint($large){
+			width: 10%;
+			margin: 0% 0% 0% 2%;
+		}
+
+		input{
+			width: 100%;
+			padding:7.7% 4%;
+			margin: 0% 0%;
+			border: 2px solid $textgrey;
+			border-radius: 4px;
+			color: white;
+			font-size: 0.7em;
+			background:$seafoam;
+			@include breakpoint($medium){
+				padding: 7.7% 4%;
+				margin: 8% 0;
+			}
+			@include breakpoint($large){
+				padding: 12.4% 1%;
+				margin: 0% 0%;	
+			}
+			@include breakpoint($full){
+			font-size: 1em;
+			}	
+
+		}
+	}
+
+}
+
+.address_section{
+		width: 90%;
+		margin: 10% auto 0 auto;
+		@include breakpoint($medium){
+			margin: 4% auto 0 auto;
+		}
+		@include breakpoint($large){
+			margin: 6% auto 0 auto;
+		}
+		
+
+		h3{
+			width: 100%;
+			display: block;
+			text-align: center;
+			color: white;
+			font-size: 1em;
+			text-decoration: underline;
+			margin: 0% 0 0 0;
+			font-weight: 300;
+		}
+
+		p{
+			width: 100%;
+			display: block;
+			text-align: center;
+			color: white;
+			font-size: 0.8em;
+			margin: 2% auto 0 auto;
+			font-weight: 300;
+
+
+		}
+}
+
+
+
+
+
+

@@ -1,0 +1,157 @@
+.deal_banner {
+  padding: 0% 0% 1% 0%;
+  border-bottom: 1px dotted rgba(192, 192, 192, 0.7);
+  text-align: center; }
+  @media screen and (min-width: 900px) {
+    .deal_banner {
+      margin: 5% 0% 0% 0%; } }
+  .deal_banner p {
+    font-size: 0.6em;
+    text-align: center;
+    font-weight: 600;
+    display: inline-block; }
+    @media screen and (min-width: 480px) {
+      .deal_banner p {
+        font-size: 0.8em; } }
+    @media screen and (min-width: 680px) {
+      .deal_banner p {
+        font-size: 1em; } }
+  .deal_banner a {
+    display: inline-block;
+    color: black;
+    text-decoration: none; }
+    .deal_banner a h6 {
+      font-size: 0.5em;
+      color: rgba(192, 192, 192, 0.9); }
+      @media screen and (min-width: 480px) {
+        .deal_banner a h6 {
+          font-size: 0.7em; } }
+      @media screen and (min-width: 680px) {
+        .deal_banner a h6 {
+          font-size: 0.8em; } }
+      .deal_banner a h6:hover {
+        color: #cb2026; }
+  .deal_banner span {
+    color: #cb2026; }
+
+.LogoWrapper_mobile {
+  margin: 2% 30% 0% 30%; }
+  @media screen and (min-width: 480px) {
+    .LogoWrapper_mobile {
+      width: 8%; } }
+
+.shopcart_mobile {
+  margin: 2% 5% 0% 0%; }
+  @media screen and (min-width: 480px) {
+    .shopcart_mobile {
+      width: 8%; } }
+
+.LogoWrapper_user {
+  width: 10%;
+  float: left;
+  margin: 2% 0% 0% 5%; }
+  @media screen and (min-width: 480px) {
+    .LogoWrapper_user {
+      width: 8%; } }
+  .LogoWrapper_user img {
+    display: block;
+    width: 100%; }
+
+.globalSearch_mobil {
+  width: 90%;
+  display: block;
+  margin: 0 auto 0 auto; }
+  @media screen and (min-width: 900px) {
+    .globalSearch_mobil {
+      display: none; } }
+  .globalSearch_mobil input {
+    display: block;
+    width: 98%;
+    margin: 0 auto 0 auto; }
+  .globalSearch_mobil input:last-child {
+    width: 100%;
+    display: block;
+    margin: 0 auto 0 auto; }
+
+.pb_search {
+  /* hide default down arrow in IE10*/
+  /* hack to fall back in opera */ }
+  .pb_search .styled-select {
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative; }
+  .pb_search .styled-select, .pb_search .styled-select select {
+    width: 12%; }
+  .pb_search select:focus {
+    outline: none; }
+  .pb_search .styled-select select {
+    height: 34px;
+    padding: 5px 0 5px 5px;
+    background: transparent;
+    border: none;
+    /*hide default down arrow in webkit */
+    -webkit-appearance: none; }
+@-moz-document url-prefix() {
+  .pb_search .styled-select select {
+    width: 110%; } }
+  .pb_search .fa-sort-desc {
+    position: absolute;
+    top: 0;
+    right: 12px;
+    font-size: 24px; }
+  .pb_search select::-ms-expand {
+    display: none; }
+  .pb_search _:-o-prefocus .styled-select, .pb_search .selector .styled-select {
+    background: none; }
+  .pb_search .pb_text {
+    width: 75%; }
+  .pb_search .search_glass {
+    display: inline-block;
+    width: 10%; }
+    .pb_search .search_glass input {
+      border: 1px solid white;
+      border-radius: 0px 5px 5px 0px;
+      background: url(../img/white_magglass.png);
+      background-size: auto 80%;
+      background-repeat: no-repeat;
+      background-position: center center;
+      color: white;
+      font-size: 1em;
+      width: 100%; }
+
+@media screen and (min-width: 680px) {
+  .page_title p {
+    margin: 4% 0% 0% 0%; }
+  .page_title h1 {
+    font-size: 2.4em;
+    margin: 1% 0 0% 0%; } }
+@media screen and (min-width: 900px) {
+  .pb_navi {
+    margin: 2% 0 0 0; }
+
+  .pb_box_2 {
+    margin: 1% 0 0 0; }
+
+  .pb_box_2 div:last-child p {
+    margin: 12% 0 0 0;
+    font-size: 0.9em; }
+
+  .pb_sec_box1 h2 {
+    margin: 7% 0 0 0; }
+
+  .pb_sec_box2 h2 {
+    margin: 7% 0 0 0; } }
+@media screen and (min-width: 980px) {
+  .content_wrapper {
+    max-width: 980px;
+    margin: 0% auto 0% auto; }
+
+  .page_title p {
+    margin: 4% 0 0 0; }
+  .page_title h1 {
+    font-size: 2.7em;
+    margin: 1% 0% 4% 0%; } }
+
+/*# sourceMappingURL=styles.css.map */
