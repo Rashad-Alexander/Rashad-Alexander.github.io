@@ -1,0 +1,1050 @@
+$brown: #5A372C;
+$grey: #8B8B70;
+$blue: #98C7B0;
+$white: #F0F0D8;
+$orange: #C94B0C;
+$obutton: #C89981;
+$oborder: #C86B3C;
+$bodywhite: #e5e5e5;
+
+$kscript: 'Kaushan Script', cursive;
+$oswald: 'Oswald', sans-serif;
+
+//mobile styled at 320px//
+$mini: 480px;
+$break2: 680px;
+$break3: 780px;
+$break4: 900px;
+$break5: 1200px;
+
+@mixin clearfix {
+  &:after { content: ""; display: table; clear: both; }
+}
+
+@mixin breakpoint($point) {
+    @media screen and ('min-width:' + $point) {
+        @content;
+    }
+}
+
+html{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+
+}
+
+body{
+	font-family: $oswald;
+	background: #98c7b0; /* Old browsers */
+	background: -moz-linear-gradient(-45deg,  #98c7b0 0%, #8b8b70 75%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#98c7b0), color-stop(75%,#8b8b70)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg,  #98c7b0 0%,#8b8b70 75%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg,  #98c7b0 0%,#8b8b70 75%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg,  #98c7b0 0%,#8b8b70 75%); /* IE10+ */
+	background: linear-gradient(135deg,  #98c7b0 0%,#8b8b70 75%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#98c7b0', endColorstr='#8b8b70',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	-webkit-text-stroke-width: .05px;
+	-webkit-text-stroke-color: white;
+	-webkit-font-smoothing:antialiased;
+
+	h1{
+	font-family: $oswald;
+	color: $orange;
+	}
+}
+
+.body_wrapper{
+	width: 90%;
+	margin: 5% auto;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#dadada+0,e9e9e9+50,dadada+100 */
+	background: rgb(218,218,218); /* Old browsers */
+	background: -moz-linear-gradient(left,  rgba(218,218,218,1) 0%, rgba(233,233,233,1) 50%, rgba(218,218,218,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(218,218,218,1)), color-stop(50%,rgba(233,233,233,1)), color-stop(100%,rgba(218,218,218,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  rgba(218,218,218,1) 0%,rgba(233,233,233,1) 50%,rgba(218,218,218,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  rgba(218,218,218,1) 0%,rgba(233,233,233,1) 50%,rgba(218,218,218,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  rgba(218,218,218,1) 0%,rgba(233,233,233,1) 50%,rgba(218,218,218,1) 100%); /* IE10+ */
+	background: linear-gradient(to right,  rgba(218,218,218,1) 0%,rgba(233,233,233,1) 50%,rgba(218,218,218,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dadada', endColorstr='#dadada',GradientType=1 ); /* IE6-9 */
+
+	top: 0;
+	left: 0;
+	right: 0;
+	box-shadow: 0px 22px 87px -24px rgba(0, 0, 0, 0.75);
+	@include clearfix;
+
+	@include breakpoint($break4){
+		max-width: 900px;
+	}
+
+
+}
+
+.rashad_header{
+	width:100%;
+	margin: 0;
+	background-image:url(../img/earthquake.gif);
+	background-size: 100% 100%;
+	background-repeat: repeat;
+	transition: background 20s linear;
+
+
+	.rashad_quote{
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		@include clearfix;
+	}
+
+	.rashad_logo{
+		width: 55%;
+		float: left;
+		padding: 2.5% 0% 0% 3%;
+		@include clearfix;
+		@include breakpoint($break2){
+				width: 40%;
+		}
+		@include breakpoint($break4){
+			    padding: 2.5% 0% 0% 3%;
+		}
+
+		h1{ 
+			width: 100%;
+			font-size: 1.2em;
+			font-weight: bold;
+			margin: 0;
+			@include breakpoint($mini){
+				font-size: 2em;
+			}
+			
+		}
+
+		.logo_square{
+			width: 40%;
+			margin: 0% auto 0% auto;
+			padding: 2.5% 60% 0% 0%;
+			clear: both;
+			@include clearfix;
+			.white{
+				background: $white;
+				width: 20%;
+				padding-bottom: 20%;
+				float: left;
+				&:hover, :active{
+					background:url(../img/square_pattern.gif);
+					background-size: 100% 100%;
+					background-repeat: repeat;
+					transition: background 20s linear; 
+				}
+			}
+			.blue{
+				background: $blue;
+				width: 20%;
+				padding-bottom: 20%;
+				float: left;
+				&:hover, :active{
+					background:url(../img/square_pattern.gif);
+					background-size: 100% 100%;
+					background-repeat: repeat;
+					transition: background 20s linear; 
+				}
+
+			}
+			.orange{
+				background: $orange;
+				width: 20%;
+				padding-bottom: 20%;
+				float: left;
+				&:hover, :active{
+					background:url(../img/square_pattern.gif);
+					background-size: 100% 100%;
+					background-repeat: repeat;
+					transition: background 20s linear; 
+				}
+			}
+			.brown{
+				background: $brown;
+				width: 20%;
+				padding-bottom: 20%;
+				float: left;
+				&:hover, :active{
+					background:url(../img/square_pattern.gif);
+					background-size: 100% 100%;
+					background-repeat: repeat;
+					transition: background 20s linear; 
+				}
+			}
+			.grey{
+				background: $grey;
+				width: 20%;
+				padding-bottom: 20%;
+				float: left;
+				&:hover, :active{
+					background:url(../img/square_pattern.gif);
+					background-size: 100% 100%;
+					background-repeat: repeat;
+					transition: background 20s linear; 
+				}
+			}
+		}
+	}
+
+	h4{ 
+		width: 38%;
+		font-size: 0.5em;
+		font-weight: bold;
+		color: $blue;
+		padding: 2.5% 0% 0% 0%;
+		margin: 0% 0 0 1px;
+		float: right;
+		vertical-align: super;
+		@include breakpoint($mini){
+			font-size: 0.8em;
+		}
+		@include breakpoint($break2){
+			padding: 3% 0 0 0;	
+		}
+		@include breakpoint($break3){
+			width: 42%;
+			font-size: 1em;	
+		}
+		@include breakpoint($break4){
+			width: 38%;
+		}
+		@include breakpoint($break5){
+			width: 34%;
+		}
+	}
+}
+
+.trippy_box{
+		opacity: 1;
+		transition: opacity 9s ease-in-out;
+		padding: 0% 0 2% 0;
+		@include breakpoint($break2){
+			width: 80%;
+			margin: 0 auto;	
+		}
+		@include breakpoint($break3){
+			width: 70%;
+		}
+		@include breakpoint($break4){
+			width: 50%;
+		}
+	
+}
+
+.rashad_pic_block{
+	width: 40%;
+	margin: 0 auto;
+	padding: 0;
+
+	img{
+		display: block;
+		width: 100%;
+		margin: 0 auto 0 auto;
+		box-shadow: 0px 22px 87px -24px rgba(0, 0, 0, 0.75);
+		border: 7px solid $orange;
+		border-radius: 50%;
+	}
+}
+
+.site_gallery{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	@include clearfix;
+	@include breakpoint($break3){
+		text-align: center;
+		margin: 3% 0% 5% 0%;		
+	}
+	.site_box{
+		width: 100%;
+		margin: 10% 0% 10% 0%;
+		padding: 0;
+	
+		@include breakpoint($break2){
+			margin: 5% 0 8% 0%;	
+		}
+		@include breakpoint($break3){
+			width: 49%;
+			display: inline-block;
+			text-align: center;
+			margin: 1% 0 1% 0;
+		}
+		a{
+			display: block;
+			text-decoration: none;
+			img{
+				display: block;
+				width: 90%;
+				margin: 0 auto;
+				border-radius: 5px;
+				box-shadow: 0px 22px 87px -24px rgba(0, 0, 0, 0.75);
+				&:hover, :active{
+					transform: translate3d(0px, -8px, 0px);
+					transition: transform 0.7s 0 infinite;
+				}
+			}
+		}
+
+		.vm_box_1, .vm_box_2, .vm_box_3, .vm_box_4{
+			width: 30%;
+			margin: 8% auto 3%;
+			@include breakpoint($break2){
+				width: 25%;		
+			}
+			@include breakpoint($break3){
+				width: 35%;		
+			}
+			a{
+				display: block;
+				img{
+					display: block;
+					width: 50%;
+					margin: 0 auto;
+					box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
+				}
+			}
+		}
+	}
+}
+
+
+.about_wrapper{
+	width: 90%;
+	margin: 0 auto;
+	@include clearfix;
+
+	div{
+		margin: 6% 0% 0% 0%;
+	}
+
+	h2{
+		color: $orange;
+		border-bottom: 2px dotted $grey;
+		text-transform: uppercase;
+		margin: 0 0 0 0;
+		padding: 0 0 0 0;
+		font-weight: 200;
+	}
+
+	h3{
+		color: rgba($blue,0.9);
+		margin: 1% 0 0 0;
+		padding: 0 0 0 0;
+	}
+
+	h4{
+		color: $brown;
+		margin: 1% 0 1% 0;
+		padding: 0 0 0 0;
+	}
+
+	p{
+		color: rgba(0,0,0,0.8);
+		font-weight: 200;
+		margin: 1% 0 1% 0;
+	}
+
+	.about_block_2{
+		padding: 0% 0% 10% 0%;
+		@include breakpoint($break2){
+			padding: 4% 0 10% 0;
+		}
+	}
+}
+
+
+@include breakpoint($break2){
+	.about_block_1{
+		margin: 0% 0% 10% 0;
+		.who_Para{
+			float: left;
+			width: 48%;
+		}
+		.obj_para{
+			float: right;
+			width: 48%;
+		}
+	}
+
+	.about_block_2{
+		clear: both;
+		padding: 0% 0 10% 0;
+		margin: 10% 0% 0% 0%;
+	}
+
+					
+}
+
+.mail_section{
+	width: 90%;
+	margin: 0 auto 10%;
+	padding: 0% 0 2% 0;
+	border-radius: 5px;
+	background: rgba($grey,0.5);
+	box-shadow: 0px 22px 87px -24px rgba(0, 0, 0, 0.75);
+	@include breakpoint($break3){
+		width: 80%;
+	}
+	.contact_info{
+		color: $orange;
+		width: 100%;
+		text-align: center;
+		display: block;
+		margin: 0 auto;
+		padding: 2% 0;
+		background: rgba($blue,0.5);
+		//background:url(../img/tetris.gif);
+		//background-size: 100% 100%;
+		//background-repeat: repeat;
+		border-radius: 5px 5px 0px 0px;
+		h3{
+			margin: 0;
+			padding: 0;
+			font-size: 1.2em;
+			text-transform: uppercase;
+			font-weight: 400;
+			@include breakpoint($break3){
+				font-size: 1.4em;
+			}
+		}
+		h4{
+			margin: 0;
+			padding: 0;
+			color: $orange;
+			font-size: 0.8em;
+			text-transform: uppercase;
+			font-weight: 400;
+			span{
+				color: darken($blue,20%);
+				margin: 0 2% 0 0;
+			}
+			@include breakpoint($break3){
+				font-size: 1em;
+			}
+		}
+
+	}
+	h2{
+		margin: 5% 0 0 1%;
+		padding: 0;
+		color: white;
+	}
+}
+
+.icon_name{
+	@include clearfix;
+	width: 88%;
+	margin: 5% auto 1%;
+	@include breakpoint($break2){
+		clear: both;	
+		margin: 3% auto 1%;
+	}
+	h2{
+		width: 50%;
+		margin: 0;
+		padding: 0;
+		font-size: 0.8em;
+		display: none;
+		vertical-align: bottom;
+		float: right;
+	}
+	.icon_box{
+		width: 10%;
+		margin: 0;
+		padding: 0% 0 0 0;
+		display: block;
+		float: left;
+		@include breakpoint($break3){
+			width: 6%;
+		}
+		img{
+			display: block;
+			width: 100%;
+			margin: 0 auto;
+		}
+	}
+}
+
+
+.firstname{
+	width: 90%;
+	margin: 0 auto 5%;
+	input{
+		height: 5%;
+		border: 5px solid $orange;
+		border-radius: 5px;
+		width: 100%;
+		color: $orange;
+		font-family: $oswald;
+		font-weight: bold;
+		padding: 0% 2% 0% 2%;
+		font-size: 0.9em;
+		@include breakpoint($break3){
+			font-size: 1.2em;
+		}
+	}
+	@include breakpoint($break2){
+			width: 43%;
+			margin: 0% 0% 3% 5%;
+			float: left;	
+	}
+}
+
+.lastname{
+	width: 90%;
+	margin: 0 auto;
+	input{
+		height: 5%;
+		border: 5px solid $orange;
+		border-radius: 5px;
+		width: 100%;
+		color: $orange;
+		font-family: $oswald;
+		font-weight: bold;
+		padding: 0% 2% 0% 2%;
+		font-size: 0.9em;
+		@include breakpoint($break3){
+			font-size: 1.2em;
+		}
+	}
+	@include breakpoint($break2){
+			width: 43%;
+			margin: 0% 5% 3% 0%;
+			float: right;	
+	}
+}
+
+.email{
+	width: 90%;
+	margin: 0 auto;
+	input{
+		height: 5%;
+		border: 5px solid $orange;
+		border-radius: 5px;
+		width: 100%;
+		color: $orange;
+		font-family: $oswald;
+		font-weight: bold;
+		padding: 0% 2% 0% 2%;
+		font-size: 0.9em;
+		@include breakpoint($break3){
+			font-size: 1.2em;
+		}
+	}
+	.value{
+		margin: 0;
+	}
+}
+
+.subject{
+	width: 90%;
+	margin: 0 auto;
+	input{
+		height: 5%;
+		border: 5px solid $orange;
+		border-radius: 5px;
+		width: 100%;
+		color: $orange;
+		font-family: $oswald;
+		font-weight: bold;
+		padding: 0% 2% 0% 2%;
+		font-size: 0.9em;
+		@include breakpoint($break3){
+			font-size: 1.2em;
+		}
+	}
+}
+
+.message{
+	width: 90%;
+	margin: 0 auto;
+	textarea{
+		width: 100%;
+		height: 25%;
+		border: 5px solid $orange;
+		border-radius: 5px;
+		width: 100%;
+		color: rgba(0,0,0,0.9);
+		font-family: $oswald;
+		font-weight: 500;
+		padding: 2% 2% 0% 2%;
+		font-size: 0.8em;
+	}
+	@include breakpoint($break3){
+		font-size: 1.2em;
+	}
+}
+
+.sendbutton{
+	width: 90%;
+	margin: 5% auto 0%;
+	@include breakpoint($break2){
+		width: 30%;
+		margin: 5% 0% 0% 65%;	
+	}
+	input{
+		width: 100%;
+		font-family: $oswald;
+		font-weight: bold;
+		color: $orange;
+		background: white;
+		border: none;
+		border-top: 4px solid lighten(grey, 50%);
+		border-bottom: 6px solid lighten(grey, 40%);
+		border-right: 4px solid lighten(grey, 50%);
+		border-left: 3px solid lighten(grey, 50%);
+		border-radius: 5px;
+		font-size: 2em;
+		&:hover{
+			border-right: 6px solid lighten($orange, 20%);
+			border-left: 3px solid $orange;
+			border-top: 4px solid lighten($orange, 20%);
+			border-bottom: 6px solid $orange;
+			color: $blue;
+			transition: color 0.3s ease-in;
+			transition: color 0.3s ease-out;
+			
+		}
+	}
+}
+
+//text-align: center;
+//				background: white;
+//				box-shadow: 0px 22px 87px -24px rgba(0, 0, 0, 0.75);
+//				margin: 0;
+//				padding: 2% 6%;
+//				text-decoration: none;
+//				color: $orange;
+//				font-family: $oswald;
+//				font-weight: bold;
+//				text-transform: uppercase;
+//				border-radius: 5px;
+//				border-bottom: 6px solid lighten(grey, 40%);
+//				border-right: 4px solid lighten(grey, 50%);
+
+.site_demo{
+	width: 100%;
+	margin: 0 0 20% 0;
+	padding: 0;
+}
+
+.demo_wrapper{
+	width: 90%;
+	margin: 0 auto;
+}
+
+.feat_site_img{
+	display: block;
+	width: 100%;
+	padding: 0;
+	margin: 0 auto;
+	img{
+		display: block;
+		width: 100%;
+	}
+
+}
+
+
+.site_links{
+	width: 100%;
+	margin: 8% auto 5%;
+	@include breakpoint($mini){
+		text-align: center;
+	}
+	@include clearfix;
+	a{
+		width: 50%;
+		margin: 0 auto;
+		padding: 0;
+		display: block;
+		text-decoration: none;
+		text-align: center;
+			@include breakpoint($mini){
+			width: 49%;
+			margin: 0;
+			display: inline-block;
+			text-align: center;
+		}
+		h2{
+			font-size: 1.5em;
+			text-align: center;
+			color: $orange;
+			font-weight: 200;
+			border-bottom: 5px solid $orange;
+			&:hover{
+				border-bottom: 5px solid $blue;
+				transition: color 0.8s ease-in;
+				
+			}
+
+			@include breakpoint($break3){
+				font-size: 2em;	
+			}
+			&:hover{
+				color: $blue;
+				transition: color 0.3s ease-in;
+				transition: color 0.3s ease-out;
+			}
+
+		}
+	}
+	
+}
+
+
+.scope_box{
+	width: 100%;
+}
+
+.scope_wrapper{
+	width: 90%;
+	margin: 0 auto;
+	h2{
+		text-align: center;
+		font-weight: 200;
+		color: darken($grey,10%);
+		@include breakpoint($break3){
+			font-size: 2em;
+		}
+	}
+}
+
+@include breakpoint($break2){
+	.scope_cat{
+		width:100%;
+		margin: 0;
+		padding: 0%;
+		text-align: center;
+		@include clearfix;
+
+
+	}
+}
+
+.ux_cat,.ui_cat,.dev_cat{
+	padding: 5% 0% 8% 0%;
+	@include breakpoint($mini){
+		padding: 5% 0% 3% 0%;
+	}
+
+	@include breakpoint($break2){
+		width: 33%;
+		display: inline-block;
+		float: left;
+		text-align: center;
+
+	}
+	@include breakpoint($break3){
+			padding: 2% 0% 3% 0%;
+		}
+	h3{
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: 400;
+		font-size: 0.9em;
+		margin: 0;
+		padding: 0;
+		color: darken($blue,10%);
+		@include breakpoint($break3){
+			font-size: 1.2em;	
+		}
+
+	}
+
+	p{
+		margin: 0;
+		padding: 0;
+		font-size: 0.9em;
+		text-align: center;
+		font-weight: 300;
+		color: rgba(0,0,0,0.7);
+		@include breakpoint($break3){
+			font-size: 0.8em;	
+		}
+	}
+
+	h5{
+		margin: 0;
+		padding: 0% 0% 0% 0%;
+		font-weight: 200;
+		font-size: 0.8em;
+		text-shadow: -1px 3px 23px rgba(0,0,0,0.3);
+		text-align: center;
+		color: darken($grey,10%);
+		border-bottom: 1px dashed $blue;
+		@include breakpoint($break2){
+			border-bottom: none;
+		}
+		@include breakpoint($break3){
+			font-size: 0.8em;	
+		}
+	}
+
+	.h5_box{
+		padding: 3% 0% 0% 0%;
+	}
+
+	
+
+}
+
+.discovery_sect{
+	h2{
+		text-align: center;
+		font-weight: 200;
+		margin: 5% 0% 5% 0%;
+		color: darken($grey,10%);
+		@include breakpoint($break3){
+			font-size: 2em;	
+		}
+	}
+
+}
+
+.disc_wrapper{
+	width: 90%;
+	margin: 0 auto;
+	@include breakpoint($break2){
+		text-align: center;
+		vertical-align: top;
+	}
+}
+
+.disc_para{
+	margin: 0 0 15% 0;
+	@include breakpoint($mini){
+		margin: 0% 0% 10% 0%;
+	}
+	@include breakpoint($break2){
+		width: 48%;
+		display: inline-block;
+		vertical-align: top;
+	}
+	h4{
+		text-align: left;
+		text-transform: uppercase;
+		font-weight: 400;
+		font-size: 0.8em;
+		margin: 0 0 3% 0;
+		padding: 0;
+		color: lighten($orange,10%);
+		@include breakpoint($break2){
+			border-bottom: 1px dashed $blue;
+		}
+		@include breakpoint($break3){
+			font-size: 0.9em;	
+		}
+		@include breakpoint($break3){
+			font-size: 0.8em;	
+		}
+
+	}
+	p{
+		margin: 0;
+		padding: 0;
+		font-size: 0.9em;
+		font-weight: 300;
+		color: rgba(0,0,0,0.7);
+		@include breakpoint($break2){
+			text-align: left;
+			vertical-align: top;
+			padding: 0 4% 0 0;
+		}
+	}
+}
+
+.sketch_wireframe{
+	width: 100%;
+	margin: 0%;
+	padding: 0%;
+	h2{
+		text-align: center;
+		font-weight: 200;
+		margin: 20% 0% 5% 0%;
+		color: darken($grey,10%);
+		@include breakpoint($break2){
+			margin: 10% 0% 5% 0%;
+		}
+		@include breakpoint($break3){
+			font-size: 2em;
+			margin: 5% 0% 5% 0%;	
+		}
+	}
+	.sw_wrapper{
+		width: 90%;
+		margin: 0 auto;
+
+	}
+	.sw_sect{
+		width: 100%;
+		display: block;
+	}
+
+	.sw_img{
+		width: 100%;
+		margin: 0% 0% 10% 0%;
+		@include breakpoint($break3){
+			width: 80%;
+			margin: 0% auto 10% auto;	
+		}
+		img{
+			display: block;
+			width: 100%;
+			border-radius: 5px;
+			box-shadow: 0px 22px 87px -24px rgba(0, 0, 0, 0.75);
+		}
+	}
+
+	
+}
+
+.code_sect{
+	h2{
+		text-align: center;
+		font-weight: 200;
+		margin: 20% 0% 5% 0%;
+		color: darken($grey,10%);
+		@include breakpoint($break3){
+			font-size: 2em;
+			margin: 20% 0% 5% 0%;	
+		}
+	}
+
+	.code_wrapper{
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	.code_img{
+		width: 100%;
+		margin: 0% 0% 10% 0%;
+		@include breakpoint($break3){
+			width: 80%;
+			margin: 0% auto 10% auto;	
+		}
+		img{
+			display: block;
+			width: 100%;
+			border-radius: 5px;
+			box-shadow: 0px 22px 87px -24px rgba(0, 0, 0, 0.75);
+		}
+	}
+
+}
+
+
+
+
+
+.navigation{
+	width: 100%;
+	margin: 0 auto;
+	padding:10% 0 5% 0; 
+	background: $blue;
+	@include breakpoint($break2){
+		padding: 8% 0 3% 0;		
+	}
+	@include breakpoint($break4){
+		padding: 6% 0 3% 00;
+	}
+
+	.navigation_wrapper{
+		width: 90%;
+		margin: 0 auto;
+		padding: 0;
+	}
+	.nav_icons{
+		width: 100%;
+		margin: 0% 0 0 0;
+		padding: 1% 0% 0% 0%;
+		a{
+			display: block;
+			width: 12%;
+			margin: 7% 0% 0% 85%;
+			padding: 0% 0% 0% 0%;
+			@include breakpoint($break2){
+				width: 8%;
+				margin: 2.5% 0% 0% 75%;
+			}
+			@include breakpoint($break4){
+				width: 6%;
+				margin: 2.5% 0% 0% 77%;
+			}
+			&:hover, :active{
+			transform: translate3d(0px, -3px, 0px);
+			transition: transform 0.7s 0 infinite;
+			}
+			img{
+				display: block;
+				width: 100%;
+			}
+		}
+	}
+	ul{
+		width: 100%;
+		padding: 0;
+		margin: 0 auto;
+		@include breakpoint($break2){
+			width: 90%;	
+		}
+		li{
+			width: 32%;
+			display: inline-block;
+			margin: 0 auto;
+			padding: 0;
+			text-align: center;
+			a{
+				text-align: center;
+				background: white;
+				box-shadow: 0px 22px 87px -24px rgba(0, 0, 0, 0.75);
+				margin: 0;
+				padding: 2% 6%;
+				text-decoration: none;
+				color: $orange;
+				font-family: $oswald;
+				font-weight: bold;
+				text-transform: uppercase;
+				border-radius: 5px;
+				border-bottom: 6px solid lighten(grey, 40%);
+				border-right: 4px solid lighten(grey, 50%);
+				@include breakpoint($mini){
+					font-size: 1.2em;	
+				}
+				@include breakpoint($break2){
+					font-size: 1.4em;
+				}
+				@include breakpoint($break3){
+					font-size: 1.5em;
+				}
+				&:hover, :active{
+					color: $blue;
+					transition: color 0.3s ease-in;
+					transition: color 0.3s ease-out;
+					border-right: 6px solid lighten($orange, 20%);
+					border-bottom: 6px solid $orange;
+					background: white;
+				}
+
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
