@@ -1,9 +1,12 @@
+console.log( $ );
+
+
 $(function(){
-        $('#menu2').slicknav({
-            label : " ",
-            duplicate : false
-        });
+    $('#menu2').slicknav({
+        label : " ",
+        duplicate : false
     });
+});
 
 $(document).ready(function() {
  
