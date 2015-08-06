@@ -1,6 +1,3 @@
-console.log( $ );
-
-
 $(function(){
     $('#menu2').slicknav({
         label : " ",
