@@ -11,12 +11,11 @@ $finisher: #848fbf;
 $sacred: #8f4646;
 $medusa: #48524f;
 
-$medium: 480px;
-$large: 790px;
-$maxwidth:980px;
-$xxl: 1020px;
-$full: 1240px;
-
+$break0: 375px;
+$break1: 480px;
+$break2: 580px;
+$break3: 680px;
+$maxwidth:740px;
 @mixin clearfix {
   &:after { content: ""; display: table; clear: both; }
 }
@@ -30,7 +29,10 @@ $full: 1240px;
 html{
 	padding: 0;
 	margin: 0;
+	width: 100%;
+	background: $lightgrey;
 }
+
 
 body{
 	font-family: $lato;
@@ -43,24 +45,36 @@ body{
 	-webkit-text-stroke-width: .05px;
 	-webkit-text-stroke-color: white;
 	-webkit-font-smoothing:antialiased;
+	background: white;
+	@include breakpoint($maxwidth){
+		max-width: $maxwidth;
+		margin:0 auto;
+	}
+	&:hover,:active{
+		background:$lightgrey;
+		transition: background 0.7s ease-in-out;
+	}
 }
 
 .video_header{
 	margin:0 auto;
-	padding-bottom:0;
+	padding-bottom:0%;
 	overflow: hidden;
 
 
 	video{
-		width: 150%;
+		width: 100%;
+		height: auto;
+		left: 0%;
+		top: 4%;
+		padding: 0% 0% 0% 0%;
+		min-width: 100%;
 		z-index: -1;
 		position: absolute;
-		left: -25%;
+		overflow: hidden;
+	
 	}
-	@include breakpoint($full){
-		 width: 130;
-		 left: 15%;
-	}
+	
 
 }
 
@@ -69,12 +83,7 @@ body{
 	margin: 0 auto;
 	position: relative;
 	padding-bottom: 3em;
-	@include breakpoint($large){
-			padding-bottom: 8em;
-		}
-	@include breakpoint($full){
-		 padding-bottom: 10em;
-	}
+	
 
 }
 
@@ -82,18 +91,10 @@ body{
 	width: 20%;
 	margin: 0% auto 8% auto;
 	padding: 3% 0 0 0;
-	@include breakpoint($medium){
-			width: 15%;
-			margin: 0% auto 4% auto;
-		}
-	@include breakpoint($full){
-		 width: 8%;
+	@include breakpoint($break3){
+		margin: 0% auto 3% auto;
 	}
 	
-	@include breakpoint($xxl){
-		 width: 8%;
-	}
-
 
 	img{
 		display: block;
@@ -109,33 +110,33 @@ body{
 	h1{
 		font-size: 1.3em;
 		text-align: center;
-		font-weight: 400;
+		font-weight: 800;
 		margin-bottom:0; 
 		text-shadow: 2px 1px rgba(83,151,121,0.4);
-		@include breakpoint($medium){
+		@include breakpoint($break1){
 			font-size: 1.8em;
 		}
-		@include breakpoint($large){
-			font-size: 3em;
+		@include breakpoint($break3){
+			font-size: 2.5em;
+			margin: 0;
+			padding: 0;
 		}
-		@include breakpoint($full){
-		 	font-size: 3em;
-		}
+		
 	}
 
 	h3{
 		font-size: 0.7em;
 		text-align: center;
-		font-weight: 300;
-		margin: 2% 0 0 0;
+		font-weight: 600;
+		margin: 4% 0 0 0;
 		text-shadow: 2px 1px rgba(83,151,121,0.3);
-		@include breakpoint($medium){
+		@include breakpoint($break0){
 			font-size: 1em;
 		}
-		@include breakpoint($large){
-			font-size: 1.4em;
+		@include breakpoint($break3){
+			font-size: 1.3em;
 		}
-
+		
 	}
 
 }
@@ -146,13 +147,14 @@ body{
 	border-shadow:2px 1px rgba(83,151,121,0.3);;
 	width: 35%;
 	margin: 2em auto 0% auto;
-	@include breakpoint($large){
-		width: 20%;
-		margin: 6em auto 0% auto;
-		}
-	@include breakpoint($full){
-		 margin: 4em auto 0% auto;
-	}	
+	@include breakpoint($break2){
+		width: 25%;	
+	}
+	&:hover,:active{
+		background: rgba(white,0.3);
+		transition: background 0.7s ease-in-out;
+	}
+	
 
 	a{
 		text-decoration: none;
@@ -166,20 +168,18 @@ body{
 		text-decoration: none;
 		margin: 8% 1% 8% 1%;
 		text-shadow: 2px 1px rgba(83,151,121,0.3);
-		@include breakpoint($large){
-			font-size: 1em;
+		@include breakpoint($break2){
+			font-size: 1.2em;	
 		}
-		@include breakpoint($xxl){
-		 	font-size: 1.4em;
-		}
-		&:hover{
+		
+		&:hover,:active{
 			color: $red;
 			transition: color 0.3s ease;
 		}
 
 	}
 
-	&:hover{
+	&:hover,:active{
 		border: 2px solid $red;
 		transition: border 0.3s ease;
 	}
@@ -190,35 +190,54 @@ body{
 	background:white;
 	width:100%;
 	margin: 0;
-	padding: 4% 0 4% 0;
+	padding: 0% 0 4% 0;
 	border-bottom: 1px dotted $textgrey;
 	overflow: hidden;
 	position: relative;
 	@include clearfix;
-	@include breakpoint($xxl){
-			padding: 2% 0 2% 0;
-		}
+	@include breakpoint($break1){
+		padding: 2% 0% 4% 0;	
+	}
+	
 
-	&:hover{
+	&:hover,:active{
 		background:$lightgrey;
 		transition: background 0.7s ease-in-out;
 	}
 
 	ul{
 		display: block;
-		width: 90;
+		width: 80%;
 		margin: 0 auto;
-		padding: 0,0,0,0;
+		padding: 0;
+		text-align: center;
 		@include clearfix;
+		@include breakpoint($break2){
+			width: 70%;	
+		}
+		@include breakpoint($break3){
+			width: 65%;
+		}
+		@include breakpoint($maxwidth){
+			width: 60%;
+		}
+
+		
 	
 
 		li{
 			float:left;
-			width: 30%;
+			width: 32%;
 			margin: 0 auto;
 			list-style: none;
+			text-align: center;
+			display: inline-block;
+			opacity: 1;
+			&:hover,:active{
+				opacity: 0.6;
+
+			}
 			a{
-				display: inline-block;
 				width: 100%;
 				text-align: center;
 				text-decoration: none;
@@ -228,12 +247,7 @@ body{
 	}
 }
 
-@include breakpoint($large){
-	.header_nav_wrapper{
-	width: 98%;
-	margin: 0 auto;
-}
-		}
+
 
 .nav_img_box{
 	width:100%;
@@ -249,9 +263,6 @@ body{
 		margin: 0 auto;
 	}
 
-	@include breakpoint($large){
-			margin: 0 auto;
-		}
 }
 
 .nav_img_text{
@@ -259,10 +270,7 @@ body{
 	text-align: center;
 	margin: 2% 0 0% 0;
 	
-	@include breakpoint($full){
-			margin: 5% 0% 0% 0%;
-	}			
-
+	
 	a{
 		text-decoration: none;
 		list-style: none;
@@ -272,22 +280,15 @@ body{
 
 	h4{
 		text-align: center;
-		color: rgba(124,138,112,0.7);
+		color: rgba($seafoam,0.9);
 		margin: 0% 0 0 0;
-		font-size: 0.5em;
+		font-size: 0.6em;
 		font-weight: 600;
 		text-height:2px;
-		@include breakpoint($medium){
-			font-size: 0.8em;
-		}
-		@include breakpoint($large){
-			font-size: 0.9em;
-		}
-		@include breakpoint($full){
-			font-size: 1.3em;
-		}	
+		text-transform: uppercase;
+		
 
-		&:hover{
+		&:hover,:active{
 			color: $red;
 			transition: color 0.3s ease-in-out;
 		}
@@ -297,52 +298,48 @@ body{
 .home_content{
 	background:white;
 	padding-bottom: 8%;
-	padding-top:10%;
+	padding-top:3%;
 	border-bottom: 1px dotted $textgrey;
-	@include breakpoint($full){
-		 padding-bottom: 4%;
-		 padding-top: 5%;
-	}	
+	
 
-	&:hover{
+	&:hover,:active{
 		background:$lightgrey;
 		transition: background 0.7s ease-in-out;
 	}
 	.home_wrapper{
-		width: 70%;
+		width: 75%;
 		margin: 0% auto 0 auto;
-	@include breakpoint($full){
-		 width: 50%;
-	}	
+		@include breakpoint($break1){
+			width: 70%;	
+		}
+		@include breakpoint($maxwidth){
+			width: 65%;
+		}
+
+
+	
 	}
 	h1{
 		color: $red;
-		font-size: 0.75em;
+		font-size: 1.3em;
 		text-align: center;
-		font-weight: 300;
-		@include breakpoint($medium){
-			font-size: 1em;
+		font-weight: 600;
+		@include breakpoint($break1){
+			font-size: 1.7em;	
 		}
-		@include breakpoint($large){
-			font-size: 1.2em;
-		}
-		@include breakpoint($full){
-			font-size: 2em;
-		}	
+		
 	}
 	p{
 		color: $textgrey;
-		text-align: center;
-		font-size: 0.5em;
-		@include breakpoint($medium){
-			font-size: 0.8em;
+		text-align: left;
+		font-size: 0.8em;
+		@include breakpoint($break1){
+			font-size: 1em;	
 		}
-		@include breakpoint($large){
-			font-size: 1em;
+		@include breakpoint($maxwidth){
+			font-size: 1.1em;
 		}
-		@include breakpoint($full){
-			font-size: 1.2em;
-		}	
+		
 
 	}
 }
@@ -357,12 +354,14 @@ body{
 
 .beer_wrapper{
 	@include clearfix;
-	@include breakpoint($medium){
-		width: 90%;
-		margin: 0% auto 0% auto;
-		padding-top: 1%;
-		padding-bottom: 5%;
+	@include breakpoint($break0){
+		padding: 5% 0 0 0;	
 	}
+	@include breakpoint($break2){
+		text-align: center;	
+		padding: 5% 2.5% 0% 2.5%;
+	}
+
 
 }
 
@@ -372,17 +371,21 @@ body{
 	padding: 0;
 	position: relative;
 	cursor: pointer;
-	@include breakpoint($medium){
-		margin: 5% auto 0% auto;
-		box-shadow: 0px 7px 20px 1px rgba(0,0,0,0.6)
-	}
-	@include breakpoint($large){
-			width: 47.5%;
-			float: left;
-			padding: 4% 0 4% 0;
-		}
+	@include breakpoint($break0){
+		width: 60%;
+		padding: 5% 0%;
+		margin: 0% auto 5%;	
 
-	&:hover .flipcard{
+	}
+	@include breakpoint($break2){
+		width: 44%;
+		display: inline-block;
+		margin: 0% 2.5% 5% 2.5%;	
+		padding:5% 0;
+
+	}
+
+	&:hover .flipcard, :active .flipcard{
 		opacity: 1;
 		transition: opacity 0.7s ease-in-out;
 
@@ -400,9 +403,7 @@ body{
 
 .finisher_block{
 	background: $finisher;
-	@include breakpoint($large){
-		margin-left: 5%;	
-	}
+	
 
 	.flipcard{
 		background: $finisher;
@@ -419,9 +420,7 @@ body{
 
 .medusa_block{
 	background: $medusa;
-	@include breakpoint($large){
-		margin-left: 5%;	
-	}
+	
 
 	.flipcard{
 		background: $medusa;
@@ -465,11 +464,7 @@ body{
 		font-weight: 300;
 		color: rgba(255,255,255,0.7);
 	}
-	@include breakpoint($medium){
-		p{
-			font-size: 1em;
-		}
-	}
+	
 }
 
 .tasting_room_content{
@@ -478,10 +473,8 @@ body{
 	margin:0;
 	padding:5% 0 5% 0;
 	@include clearfix;
-	@include breakpoint($full){
-		padding: 3% 0 5% 0;	
-	}
-	&:hover{
+	
+	&:hover,:active{
 		background:$lightgrey;
 		transition: background 0.7s ease-in-out;
 	}
@@ -491,40 +484,27 @@ body{
 	width:90%;
 	margin:0 auto;
 	padding:0;
-	@include breakpoint($xxl){
-		width: 85%;
-	}
+	
 }
 
 .tasting_paragraph{
 	width:100%;
 	margin:0;
 	padding-bottom: 5%;
-	@include breakpoint($medium){
-		width: 90%;
-		margin: 0 auto;
-	}
+	
 	h1{
 		color: $darkgreen;
 		font-size: 2em;
 		font-weight: 600;
 		text-align: center;
 		margin: 0;
-		@include breakpoint($full){
-			font-size: 3em;
-		}
+		
 	}
 	p{
-		text-align: center;
+		text-align: left;
 		color: $textgrey;
 		font-size: 0.9em;
-		@include breakpoint($large){
-			font-size: 1.2em;
-			text-align: justify;
-		}
-		@include breakpoint($full){
-			font-size: 1.5em;
-		}
+		
 	}
 
 }
@@ -533,10 +513,7 @@ body{
 	width: 100%;
 	margin: 0 auto;
 	padding: 0;
-	@include breakpoint($medium){
-		width: 50%;
-		float: left;
-	}
+	
 	
 	h4{
 		color: $red;
@@ -545,12 +522,6 @@ body{
 		font-size: 1.5em;
 		font-size: 300;
 		text-align: center;
-		@include breakpoint($medium){
-		font-size: 1em;
-		@include breakpoint($large){
-			font-size: 1.2em;
-		}
-		}
 	}
 
 }
@@ -566,12 +537,7 @@ body{
 		width: 30%;
 		float: left;
 		font-size: 1.2em;
-		@include breakpoint($medium){
-			font-size: 1em;
-		}
-		@include breakpoint($large){
-			font-size: 1.2em;
-		}
+		
 		h6{
 			margin: 0 0 0 10%;
 			padding: 0;
@@ -584,12 +550,7 @@ body{
 		float: right;
 		margin: 0;
 		font-size: 1.2em;
-		@include breakpoint($medium){
-			font-size: 1em;
-		}
-		@include breakpoint($large){
-			font-size: 1.2em;
-		}
+		
 		h6{
 			margin: 0 0 0 20%;
 			padding: 0;
@@ -606,11 +567,7 @@ body{
 	border-top: 5px solid $red;
 	border-bottom: 5px solid $red;
 
-	@include breakpoint($medium){
-		width: 50%;
-		float: right;
-		margin:0 0 0 0;
-	}
+
 	
 	
 }
@@ -657,7 +614,7 @@ body{
 		padding: 0;
 	}
 
-	&:hover{
+	&:hover,:active{
 		border: 2px solid $red;
 		h6{
 			color: $red;
@@ -668,52 +625,56 @@ body{
 .contact_section{
 	background:white;
 	padding: 8% 0 8% 0;
-	@include breakpoint($full){
-		padding: 4% 0 4% 0;
-	}	
-	&:hover{
+	
+	&:hover,:active{
 		background:$lightgrey;
 		transition: background 0.7s ease-in-out;
 	}
 
 	.contact_wrapper{
-		width: 70%;
+		width: 75%;
 		margin: 0% auto 0 auto;
-		@include breakpoint($full){
-			width: 50%;
-		}	
+		@include breakpoint($break2){
+			width: 70%;	
+		}
+		@include breakpoint($maxwidth){
+			width: 65%;
+		}
+		
 	}
 
 	h2{
 		color: $red;
-		font-size: 0.75em;
+		font-size: 0.8em;
 		text-align: center;
-		font-weight: 300;
-		@include breakpoint($medium){
-			font-size: 1em;
+		font-weight: 600;
+		@include breakpoint($break1){
+			font-size: 1.2em;	
 		}
-		@include breakpoint($large){
-			font-size: 1.2em;
+		@include breakpoint($break2){
+			font-size: 1.35em;	
 		}
-		@include breakpoint($full){
-			font-size: 2em;
-		}	
+		@include breakpoint($break3){
+			font-size: 1.58em;
+		}
+		@include breakpoint($maxwidth){
+			font-size: 1.62em;
+		}
+		
 	}
 
 
 	p{
 		color: $textgrey;
-		text-align: center;
-		font-size: 0.5em;
-		@include breakpoint($medium){
-			font-size: 0.8em;
+		text-align: left;
+		font-size: 0.8em;
+		@include breakpoint($break1){
+			font-size: 1em;	
 		}
-		@include breakpoint($large){
-			font-size: 1em;
+		@include breakpoint($maxwidth){
+			font-size: 1.1em;
 		}
-		@include breakpoint($full){
-			font-size: 1.2em;
-		}	
+		
 
 	}
 
@@ -733,56 +694,34 @@ form{
 
 	.firstname{
 		input{
-			width: 40%;
-			padding:3% 3%;
+			width: 42%;
+			padding:3% 1% 3% 3%;
 			border: 2px solid $textgrey;
 			border-radius: 4px;
 			color: $textgrey;
-			font-size: 0.5em;
+			font-size: 0.7em;
 			float: left;
-			@include breakpoint($medium){
-			font-size: 0.8em;
-			padding:4% 0%;
-			width: 46%;
-			margin: 0 2% 0 0%;
-		}
-			@include breakpoint($large){
-			font-size: 1em;
-			padding: 2% 0%;
-			width: 46%
-		}
-		@include breakpoint($full){
-			font-size: 1.2em;
-			width: 46%;
-		}	
+			@include breakpoint($break1){
+				font-size: 0.8em;
+			}
+		
 
 		}
 	}
 
 	.lastname{
 		input{
-			width: 40%;
-			padding:3% 3%;
+			width: 42%;
+			padding:3% 1% 3% 3%;
 			border: 2px solid $textgrey;
 			border-radius: 4px;
 			color: $textgrey;
-			font-size: 0.5em;
+			font-size: 0.7em;
 			float: right;
-			@include breakpoint($medium){
-			font-size: 0.8em;
-			padding:4% 0%;
-			width: 46%;
-			margin: 0 0 0 2%;
-		}
-			@include breakpoint($large){
-			font-size: 1em;
-			padding: 2% 0%;
-			width: 45%;
-		}
-		@include breakpoint($full){
-			font-size: 1.2em;
-			width: 46%;
-		}	
+			@include breakpoint($break1){
+				font-size: 0.8em;
+			}
+		
 
 
 		}
@@ -794,32 +733,17 @@ form{
 		margin: 0 0 5% 0;
 
 		input{
-			width: 100%;
-			padding:3% 0%;
+			width: 95%;
+			padding:3% 1% 3% 3%;
 			margin: 0% 0%;
 			border: 2px solid $textgrey;
 			border-radius: 4px;
 			color: $textgrey;
-			font-size: 0.5em;
+			font-size: 0.7em;
 			float: right;
-			@include breakpoint($medium){
-			font-size: 0.8em;
-			padding:4% 0%;
-			width: 100%;
-			
-		}
-			@include breakpoint($large){
-			font-size: 1em;
-			width: 100%;
-			padding: 2% 0;
-		}
-		@include breakpoint($full){
-			font-size: 1.2em;
-			width: 100%;
-			padding: 2% 0;
-		}	
-
-
+			@include breakpoint($break1){
+				font-size: 0.8em;
+			}
 		}
 	}
 
@@ -829,16 +753,16 @@ form{
 		margin: 0 0 5% 0;
 
 		textarea{
-			width: 100%;
-			padding:3% 0%;
+			width: 95%;
+			padding:3% 1% 3% 3%;
 			margin: 0% 0%;
 			border: 2px solid $textgrey;
 			border-radius: 4px;
 			color: $textgrey;
-			font-size: 0.5em;
+			font-size: 0.7em;
 			float: right;
-			@include breakpoint($large){
-				padding: 20% 0 20% 0;
+			@include breakpoint($break1){
+				font-size: 0.8em;
 			}
 		}
 
@@ -859,23 +783,19 @@ form{
 			border: 2px solid black;
 			border-radius: 4px;
 			color: black;
-			font-size: 0.5em;
+			font-size: 0.7em;
 			float: right;
 			background:white;
-			@include breakpoint($medium){
-			font-size: 0.8em;
-			padding:10% 10%;
-		}
-			@include breakpoint($large){
-			font-size: 1em;
-			padding: 5% 5%;
-		}
-			&:hover{
+			@include breakpoint($break1){
+				font-size: 0.8em;
+			}	
+			&:hover,:active{
 				border: 2px solid $red;
 				color: $red;
 				transition: border 0.3s ease-in-out;
 				transition: color 0.3s ease-in-out;
 			}
+
 		}
 	}
 
@@ -889,9 +809,8 @@ form{
 	// margin: 0 0 81% 0;
 	padding: 4% 0 4% 0;
 	border-bottom: 1px dotted $textgrey;
-	@include breakpoint($xxl){
-		padding: 2% 0 2% 0;
-	}
+	display: none;
+	
 
 
 	ul{
@@ -951,27 +870,27 @@ form{
 		font-size: 0.5em;
 		font-weight: 600;
 		text-height:2px;
-		@include breakpoint($medium){
-			font-size: 0.8em;
-		}
-		&:hover{
+		&:hover,:active{
 			color: $darkgreen;
 			transition: color 0.3s ease-in-out;
 		}
 	}
 }
 
-@include breakpoint($large){
-	.footer_nav_wrapper{
-	width: 60%;
-	margin: 0 auto;
-}
-		}
+
+		
 
 
 .fixed_section_wrapper{
 	position: relative;
 	z-index: -10;
+	@include breakpoint($maxwidth){
+		max-width: $maxwidth;
+		margin:0 auto;
+	}
+	&:hover,:active{
+		z-index: -2000;
+	}
 }
 
 .fixed_section{
@@ -982,34 +901,27 @@ form{
 	right: 0;
 	left: 0;
 	z-index: -3;
+	@include breakpoint($maxwidth){
+		max-width: $maxwidth;
+		margin:0 auto;
+	}
 
 	.inner{
 		padding: 2% 0 2% 0;
 		margin: 10% 0 2% 0;
 		@include clearfix;
-		@include breakpoint($large){
-			margin: 0% 0 2% 0;
-			padding: 4% 0 0 0;
-		}
+		
 	}
 }
 
 .fixed_logo{
 	width:33%;
 	margin: 0 auto;
-	@include breakpoint($large){
-	float: left;
-	margin: 0 0 1% 0;
-
-	}
 	img{
 		display: block;
 		width: 80%;
 		margin: 0 auto 0 auto;
-		@include breakpoint($large){
-		width: 60%;
-
-	}
+		
 
 	}
 }
@@ -1020,21 +932,6 @@ form{
 	margin: 8% auto;
 	clear: both;
 	@include clearfix;
-
-	@include breakpoint($medium){
-		margin: 5% auto;
-	}
-
-	@include breakpoint($large){
-	margin: 0% 0%;
-	width: 25%;
-	clear:none;
-	display: block;
-	float: left;
-	vertical-align: middle;
-	
-
-}
 	
 	ul{
 		margin: 0;
@@ -1062,9 +959,6 @@ form{
 	padding-top: 3%;
 	@include clearfix;
 	width: 100%;
-	@include breakpoint($large){
-		padding-top: 1%;
-	}
 	h3{
 		width: 100%;
 		margin: 5% auto 0 auto;
@@ -1072,67 +966,53 @@ form{
 		font-weight: 300;
 		text-align: center;
 		color: white;
-		@include breakpoint($medium){
-			margin: 0% auto 0 auto;
+		@include breakpoint($break1){
+			font-size: 1.3em;	
 		}
-		@include breakpoint($large){
-			padding: 2% auto 0 auto;
+		@include breakpoint($break3){
+			font-size: 1.6em;
 		}
-		@include breakpoint($full){
-			margin: 2% 0 0 0;
-			font-size: 1.4em;
-		}	
-
 	}
 
 	form{
-		width: 90%;
+		width: 80%;
 		margin: 3% auto 0 auto;
+		@include breakpoint($break0){
+			width: 70%;
+		}
+		@include breakpoint($break3){
+			width: 60%;
+		}
+		@include breakpoint($maxwidth){
+			width: 55%;
+		}
 		fieldset{
 			border: none;
-		@include breakpoint($large){
-			margin: 0% auto 0 auto;
-			}
 		}
 	}
+
 
 	.footer_email{
 		border:none;
 		padding:0 0;
 		margin: 0% 0 0 0;
-		width: 65%;
+		width: 60%;
 		float: left;
-		@include breakpoint($medium){
-			margin: 0% 0% 0% 10%;
-			padding: 2% 0%;
-			width: 50%;	
-		}
-		@include breakpoint($large){
-			width: 58%;
-			margin: 0% 0% 0% 0%;
-			padding: 0 0;
-		}
 
 		input{
 			width: 100%;
-			padding:3% 0%;
-			margin: 0% auto;
+			padding:3% 0% 3% 3%;
+			margin: 0% 0% 0% 0%;
 			border: 2px solid $textgrey;
 			border-radius: 4px;
 			color: white;
 			font-size: 0.7em;
 			font-size: 300;
 			background: $seafoam;
-			@include breakpoint($medium){
-				padding:4% 0;
+			@include breakpoint($break1){
+				font-size: 0.8em;	
 			}
-			@include breakpoint($large){
-			width: 50%;
-			margin: 0% 0% 0% 50%;
-			padding: 2% 0;
-			@include breakpoint($full){
-			font-size: 1em;
-			}	
+			
 
 		}
 
@@ -1143,51 +1023,31 @@ form{
 	.footer_submit{
 		border:none;
 		padding:0 0;
-		width: 25%;
-		margin: 0 5%;
+		width: 35%;
+		margin: 0% 0% 0% 5%;
 		float: left;
-		@include breakpoint($large){
-			width: 10%;
-			margin: 0% 0% 0% 2%;
-		}
+		
 
 		input{
 			width: 100%;
-			padding:7.7% 4%;
+			padding:5% 0% 5% 3%;
 			margin: 0% 0%;
 			border: 2px solid $textgrey;
 			border-radius: 4px;
 			color: white;
 			font-size: 0.7em;
 			background:$seafoam;
-			@include breakpoint($medium){
-				padding: 7.7% 4%;
-				margin: 8% 0;
+			@include breakpoint($break1){
+				font-size: 0.8em;	
 			}
-			@include breakpoint($large){
-				padding: 12.4% 1%;
-				margin: 0% 0%;	
-			}
-			@include breakpoint($full){
-			font-size: 1em;
-			}	
-
 		}
 	}
 
-}
+
 
 .address_section{
 		width: 90%;
 		margin: 10% auto 0 auto;
-		@include breakpoint($medium){
-			margin: 4% auto 0 auto;
-		}
-		@include breakpoint($large){
-			margin: 6% auto 0 auto;
-		}
-		
-
 		h3{
 			width: 100%;
 			display: block;
@@ -1197,6 +1057,9 @@ form{
 			text-decoration: underline;
 			margin: 0% 0 0 0;
 			font-weight: 300;
+			@include breakpoint($break3){
+				font-size: 1.2em;
+			}
 		}
 
 		p{
@@ -1207,6 +1070,9 @@ form{
 			font-size: 0.8em;
 			margin: 2% auto 0 auto;
 			font-weight: 300;
+			@include breakpoint($break3){
+				font-size: 0.9em;
+			}
 
 
 		}

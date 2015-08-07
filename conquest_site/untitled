@@ -74,21 +74,76 @@
 			</div> <!--END header_navigation-->
 			
 		</header> <!--END header-->
-		<div id="home_jump"></div>
-		<div class="home_content">
-			<div class="home_wrapper">
-				<h1>WE CAME,</h1>
-				<h1>WE SAW,</h1>
-				<h1>WE CONQUERED!</h1>
-				<p>
-					Conquest Brewing Company is the embodiment of an idea. The idea that beer should be more than a beverage, more than an alcohol delivery system.
-				</p>
-				<p>
-					Our beers pay homage to bygone times of war and peace, to tales both fantastic and dreadfully real. We believe that the onward march of history will show that in the end, honor is what makes a man, and taste is what makes a beer...not marketing, not hype. Taste. And we do not intend to be lost to the annals of history.
-				</p>
+		<div id="beer_jump"></div>
+		<div class="beer_content">
+			<div class="beer_wrapper">
+				
+				
+				<div class="artemis_block block">
+					<div class="beer_block_wrapper">
+						<div class="artemis_bottle bottle">
+							<img src="img/artemis_beer.png" alt="Artemis Bottle">
+						</div><!--END BOTTLE IMG-->
+
+						<div class="artemis_flipcard flipcard">
+							<h1>Artemis Blonde</h1>
+							<p>
+								With a crystal clear blonde body and fluffy white head, her effervescence emanates as she quenches your thirst and caresses your tongue with mild notes of Belma and Zythos and a delicate malt profile. Her warrior spirit can be experienced in the mild bitterness that is perfectly balanced with the refreshing, honey-like sweetness. Experience her for yourself. You will know the purity of the noble-born.
+							</p>
+
+						</div><!--END FLIPCARD-->
+					</div> <!--END beer_block_wrapper-->	
+				</div> <!--BEER BLOCK-->
+				
+				<div class="finisher_block block">
+					<div class="finisher_bottle bottle">
+						<img src="img/finisher_lager.png" alt="Finisher Bottle">
+					</div><!--END BOTTLE IMG-->
+
+					<div class="finisher_flipcard flipcard">
+						<h1>Finisher Lager</h1>
+						<p>
+							With a crystal clear blonde body and fluffy white head, her effervescence emanates as she quenches your thirst and caresses your tongue with mild notes of Belma and Zythos and a delicate malt profile. Her warrior spirit can be experienced in the mild bitterness that is perfectly balanced with the refreshing, honey-like sweetness. Experience her for yourself. You will know the purity of the noble-born.
+						</p>
+
+					</div><!--END FLIPCARD-->	
+				</div> <!--BEER BLOCK-->
+
+				<div class="sacred_block block">
+					<div class="beer_block_wrapper">
+						<div class="sacred_bottle bottle">
+							<img src="img/sacred_heart.png" alt="sacred Bottle">
+						</div><!--END BOTTLE IMG-->
+
+						<div class="sacred_flipcard flipcard">
+							<h1>Sacred Lager</h1>
+							<p>
+								With a crystal clear blonde body and fluffy white head, her effervescence emanates as she quenches your thirst and caresses your tongue with mild notes of Belma and Zythos and a delicate malt profile. Her warrior spirit can be experienced in the mild bitterness that is perfectly balanced with the refreshing, honey-like sweetness. Experience her for yourself. You will know the purity of the noble-born.
+							</p>
+
+						</div><!--END FLIPCARD-->
+					</div> <!--END beer_block_wrapper-->	
+				</div> <!--BEER BLOCK-->
+
+				<div class="medusa_block block">
+					<div class="beer_block_wrapper">
+						<div class="medusa_bottle bottle">
+							<img src="img/medusa_stout.png" alt="medusa Bottle">
+						</div><!--END BOTTLE IMG-->
+
+						<div class="medusa_flipcard flipcard">
+							<h1>Medusa Lager</h1>
+							<p>
+								With a crystal clear blonde body and fluffy white head, her effervescence emanates as she quenches your thirst and caresses your tongue with mild notes of Belma and Zythos and a delicate malt profile. Her warrior spirit can be experienced in the mild bitterness that is perfectly balanced with the refreshing, honey-like sweetness. Experience her for yourself. You will know the purity of the noble-born.
+							</p>
+
+						</div><!--END FLIPCARD-->
+					</div> <!--END beer_block_wrapper-->	
+				</div> <!--BEER BLOCK-->
+				
 			</div> <!--END wrapper-->
 			
-		</div><!-- END home_content-->
+		</div><!-- END beer_content-->
 
 		<footer> 
 			<div class="contact_section">
