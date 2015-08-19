@@ -1035,8 +1035,44 @@ body{
 			}
 		}
 	}
+
 }
 
+.resume_block{
+	width: 50%;
+	margin: 0 auto 10%;
+	@include breakpoint($mini){
+		width: 40%;	
+	}
+	@include breakpoint($break2){
+		width: 30%;	
+	}
+	@include breakpoint($break3){
+		width: 25%;	
+	}
+	@include breakpoint($break4){
+		width: 20%;	
+	}
+	a{
+		display: block;
+		width: 100%;
+		text-decoration: none;
+		img{
+			width: 100%;
+			display: block;
+		}
+	}
+	h2{
+		color: $orange;
+		text-align: center;
+		&:hover, :active{
+			color: $blue;
+			transition: color 0.3s ease-in;
+			transition: color 0.3s ease-out;
+		}
+
+	}
+}
 
 
 
