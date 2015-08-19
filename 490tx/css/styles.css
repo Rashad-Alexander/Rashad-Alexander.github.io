@@ -1,0 +1,18 @@
+.logo_box {
+  width: 100%;
+  display: block;
+  margin-bottom: 5%; }
+  .logo_box img {
+    display: block;
+    width: 80%;
+    margin: 0 auto; }
+
+.call-to-action {
+  background: #f1505c; }
+
+.fa, .fa-envelope-o, .fa-fw {
+  color: #f1505c; }
+  .fa a, .fa-envelope-o a, .fa-fw a {
+    color: #f1505c; }
+
+/*# sourceMappingURL=styles.css.map */

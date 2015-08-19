@@ -1,0 +1,44 @@
+$pink: #f1505c;
+
+
+$kscript: 'Kaushan Script', cursive;
+$oswald: 'Oswald', sans-serif;
+
+//mobile styled at 320px//
+$mini: 480px;
+$break2: 680px;
+$break3: 780px;
+$break4: 900px;
+$break5: 1200px;
+
+@mixin clearfix {
+  &:after { content: ""; display: table; clear: both; }
+}
+
+@mixin breakpoint($point) {
+    @media screen and ('min-width:' + $point) {
+        @content;
+    }
+}
+
+.logo_box{
+	width: 100%;
+	display: block;
+	margin-bottom:5%;
+	img{
+		display: block;
+		width: 80%;
+		margin: 0 auto;
+	}
+}
+
+.call-to-action{
+	background: $pink;
+}
+
+.fa, .fa-envelope-o, .fa-fw{
+	color: $pink;
+	a{
+		color: $pink;
+	}
+}
