@@ -1,0 +1,100 @@
+.centerpiece_logo {
+  width: 100%;
+  margin: 0 auto; }
+  .centerpiece_logo img {
+    display: block;
+    width: 60%;
+    margin: 0 auto; }
+
+.svper_fixed_logo {
+  width: 40%;
+  margin: 0 auto; }
+  .svper_fixed_logo img {
+    width: 50%;
+    margin: 10% auto 0;
+    display: block; }
+
+.services-wrapper iframe {
+  display: block;
+  width: 100%; }
+.services-wrapper p {
+  text-align: center;
+  margin: 2% 0 0 0; }
+.services-wrapper a {
+  color: white;
+  text-transform: uppercase; }
+
+.btn_vimeo {
+  border: 2px solid #a1af83;
+  border-radius: 15%; }
+  .btn_vimeo:hover {
+    background: #a1af83; }
+
+.btn_price {
+  background: transparent; }
+  .btn_price:hover {
+    background: #cb2028; }
+
+.btn_instagram {
+  border: 2px solid #af7825;
+  border-radius: 15%; }
+  .btn_instagram:hover {
+    background: #af7825; }
+
+.btn_twitter {
+  border: 2px solid #e56885;
+  border-radius: 15%; }
+  .btn_twitter:hover {
+    background: #e56885; }
+
+.btn_facebook {
+  border: 2px solid #775abe;
+  border-radius: 15%; }
+  .btn_facebook:hover {
+    background: #775abe; }
+
+.navbar-inverse {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-color: transparent; }
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+  background-color: transparent;
+  border-bottom: 1px solid #cb2028; }
+
+.navbar-inverse .navbar-nav > li > a {
+  font-size: 12px;
+  font-weight: 800;
+  padding: 5px 0px;
+  letter-spacing: 2px;
+  margin: 10px 20px 10px 20px;
+  color: #cb2028; }
+  .navbar-inverse .navbar-nav > li > a:hover {
+    color: white; }
+  .navbar-inverse .navbar-nav > li > a:active {
+    color: white; }
+
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-brand:hover {
+  color: white;
+  font-weight: 900;
+  font-family: 'Oswald', sans-serif; }
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+  border-color: white; }
+
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+  background-color: black; }
+
+.navbar-inverse .navbar-toggle {
+  border-color: black; }
+
+.col-xs-12, .col-sm-4, .col-md-4, .col-lg-4 {
+  margin-bottom: 5%; }
+
+.nav_logo {
+  width: 10%;
+  padding-bottom: 10%; }
+  .nav_logo img {
+    display: block;
+    width: 100%; }
+
+/*# sourceMappingURL=styles.css.map */

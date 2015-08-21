@@ -1,0 +1,169 @@
+$pink: #e56885;
+$green: #a1af83;
+$yellow: #af7825;
+$purple: #775abe;
+$red: #cb2028;
+
+@mixin clearfix {
+  &:after { content: ""; display: table; clear: both; }
+}
+
+@mixin breakpoint($point) {
+    @media screen and ('min-width:' + $point) {
+        @content;
+    }
+}
+
+.centerpiece_logo{
+	width: 100%;
+	margin: 0 auto;
+	img{
+		display: block;
+		width: 60%;
+		margin: 0 auto;
+	}
+}
+
+.svper_fixed_logo{
+	width: 40%;
+	margin: 0 auto;
+	img{
+		width: 50%;
+		margin: 10% auto 0;
+		display: block;
+	}
+}
+
+.services-wrapper{
+	iframe{
+		display: block;
+		width: 100%;
+
+	}
+
+	p{
+		text-align: center;
+		margin: 2% 0 0 0;
+	}
+
+	a{
+		color: white;
+		text-transform: uppercase;
+	}
+}
+
+.btn_vimeo{
+	border: 2px solid $green;
+	border-radius: 15%;
+	&:hover{
+		background: $green;
+	}
+
+}
+
+.btn_price{
+	background: transparent;
+	&:hover{
+		background: $red;
+	}
+}
+
+.btn_instagram{
+	border: 2px solid $yellow;
+	border-radius: 15%;
+	&:hover{
+		background: $yellow;
+	}
+
+}
+
+.btn_twitter{
+	border: 2px solid $pink;
+	border-radius: 15%;
+	&:hover{
+		background: $pink;
+	}
+
+}
+
+.btn_facebook{
+	border: 2px solid $purple;
+	border-radius: 15%;
+	&:hover{
+		background: $purple;
+	}
+
+}
+
+.navbar-inverse {
+background-color: rgba(0, 0, 0, 0.3);
+border-color: transparent;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+background-color: transparent;
+border-bottom: 1px solid $red;
+
+}
+
+.navbar-inverse .navbar-nav > li > a {
+font-size: 12px;
+font-weight: 800;
+padding: 5px 0px;
+letter-spacing: 2px;
+margin: 10px 20px 10px 20px;
+color: $red;
+	&:hover{
+		color: white;
+	}	
+
+	&:active{
+		color: white;
+	}
+}
+
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-brand:hover {
+color: white;
+font-weight: 900;
+font-family: 'Oswald', sans-serif;
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+border-color: white;
+}
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+background-color: black;
+}
+.navbar-inverse .navbar-toggle {
+border-color: black;
+}
+
+
+.col-xs-12, .col-sm-4, .col-md-4, .col-lg-4{
+	margin-bottom:5%;
+}
+
+
+
+.nav_logo{
+	width: 10%;
+	padding-bottom: 10%;
+	img{
+		display: block;
+		width: 100%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
